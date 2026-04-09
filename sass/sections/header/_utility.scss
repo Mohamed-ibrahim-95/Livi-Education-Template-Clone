@@ -1,0 +1,26 @@
+@use "../../abstracts/" as *;
+
+// Utility Start
+.utilityBar {
+  @include flex(
+    $display: flex,
+    $direction: row,
+    $wrap: wrap,
+    $align: center,
+    $gap: units(20, "px")
+  );
+
+  .iconBox {
+    cursor: pointer;
+
+    .utilityIcon {
+      @include prefixer(transition, color 0.3s ease-in-out);
+    }
+
+    &:hover {
+      .utilityIcon {
+        color: var(--primary-color);
+      }
+    }
+  }
+}

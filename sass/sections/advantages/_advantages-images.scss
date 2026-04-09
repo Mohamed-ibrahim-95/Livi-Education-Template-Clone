@@ -1,0 +1,43 @@
+@use "../../abstracts/" as *;
+
+.advantages-container {
+  .advantages {
+    .advantages-content {
+      .advantages-images {
+        .images-container {
+          height: 100%;
+
+          @include flex(
+            $display: flex,
+            $align: flex-start,
+            $gap: units(25, "px")
+          );
+          .img-box {
+            position: relative;
+            @include flex($display: flex, $gap: units(25, "px"));
+
+            &.start {
+              align-self: flex-start;
+
+              @include media-breakpoints("only", "lg") {
+                align-self: center;
+              }
+            }
+
+            &.end {
+              align-self: flex-end;
+            }
+
+            &.mr-top {
+              margin-top: units(25, "%");
+            }
+
+            img {
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+  }
+}

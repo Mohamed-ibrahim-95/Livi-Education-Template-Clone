@@ -1,0 +1,71 @@
+@use "../../abstracts/" as *;
+
+.footer-section {
+  background-color: var(--tertiary-color);
+  .footer-container {
+    .footer-up {
+      padding: units(50, "rem");
+      background-color: var(--body-bg-color);
+      @include flex($display: flex, $direction: row, $align: center);
+
+      &.main-hover-effect {
+        &.active {
+          border: none !important;
+        }
+      }
+
+      @include media-breakpoints("down", "lg") {
+        @include flex(
+          $direction: column,
+          $align: flex-start,
+          $gap: units(20, "px")
+        );
+      }
+
+      .footer-up-boxes {
+        @include flex(
+          $display: flex,
+          $direction: row,
+          $wrap: wrap,
+          $align: center,
+          $gap: units(20, "px")
+        );
+        .box {
+          flex: 1;
+          padding: clamp(1.25rem, 1.1058rem + 0.641vw, 1.875rem);
+          background-color: var(--tertiary-color);
+          border-radius: units(10, "px");
+
+          @include flex(
+            $display: flex,
+            $direction: column,
+            $justify: center,
+            $align: center,
+            $gap: units(20, "px")
+          );
+
+          .box-icon {
+            i {
+              font-size: units(45, "rem");
+              color: var(--primary-color);
+            }
+          }
+          .box-title {
+            @include font(
+              $size: units(18, "rem"),
+              $weight: 600,
+              $status: capitalize
+            );
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer-end {
+  .container {
+    padding: units(25, "rem") 0;
+    @include flex($display: flex, $justify: center);
+  }
+}

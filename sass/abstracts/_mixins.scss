@@ -1,0 +1,112 @@
+// Importing core SASS modules for extended functionality and better organization
+@use "sass:meta"; // Metadata utilities
+@use "sass:math"; // Mathematical functions
+@use "sass:color"; // Color manipulation
+@use "sass:string"; // String operations
+@use "sass:list"; // List operations
+@use "sass:map"; // Map operations
+@use "sass:selector"; // Selector utilities
+
+@use "./variables" as *;
+@use "./functions" as *;
+@use "./placeholders" as *;
+
+// @mixin media-breakpoints
+// This mixin generates responsive media queries based on the media type, breakpoint, and optional endpoint.
+// This mixin generates responsive media queries based on the media type, breakpoint, and optional endpoint
+@mixin media-breakpoints($media, $breakpoint, $endPoint: null) {
+  $checkMedia: list.index(
+    $list: $media-screen,
+    $value: $media,
+  );
+  $checkPoint: list.index(
+    $list: $breakpoints,
+    $value: $breakpoint,
+  );
+  $checkEndPoint: list.index(
+    $list: $breakpoints,
+    $value: $endPoint,
+  );
+
+  @if ($checkMedia != null and $checkPoint != null) {
+    // media-breakpoint-only
+    @if ($media == "only") {
+      $min: map.get($grid-breakpoints, $breakpoint);
+      $max: map.get(
+        $grid-breakpoints,
+        list.nth(
+          map.keys($grid-breakpoints),
+          calc(list.index(map.keys($grid-breakpoints), $breakpoint) + 1)
+        )
+      );
+
+      @media (min-width: $min) and (max-width: calc($max - $subtract)) {
+        @content;
+      }
+    }
+    // media-breakpoint-between
+    @else if ($media == "between" and $checkEndPoint != null) {
+      $prevScreen: map.get($grid-breakpoints, $breakpoint);
+      $nextScreen: map.get($grid-breakpoints, $endPoint);
+
+      @if ($prevScreen < $nextScreen) {
+        @media (min-width: $prevScreen) and (max-width: calc($nextScreen - $subtract)) {
+          @content;
+        }
+      }
+    } @else {
+      // media-breakpoint-up && media-breakpoint-down
+      $Screen: up-down($media, $breakpoint);
+      @media ($Screen) {
+        @content;
+      }
+    }
+  }
+}
+// Prefix
+@mixin prefixer($property, $value) {
+  @each $key in $prefixes {
+    -#{$key}-#{$property}: $value;
+  }
+  #{$property}: $value;
+}
+
+// Mixin for applying font styles (color, size, weight, and text transformation).
+@mixin font(
+  $color: null,
+  $size: null,
+  $weight: null,
+  $family: null,
+  $status: null
+) {
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+  font-family: $family;
+  text-transform: $status;
+}
+
+// Mixin Flix box
+@mixin flex(
+  $display: null,
+  $direction: null,
+  $wrap: null,
+  $justify: null,
+  $align: null,
+  $gap: null
+) {
+  display: $display;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+// Mixin to apply the same value to a set of CSS properties.
+// It takes an array of properties and a single value, then assigns that value to each property.
+@mixin same-values($propertys, $value) {
+  @each $property in $propertys {
+    #{$property}: $value;
+  }
+}

@@ -1,0 +1,73 @@
+@use "../../abstracts/" as *;
+
+.team {
+  .team-container {
+    @include flex($display: flex, $direction: column, $gap: units(30, "px"));
+
+    .team-boxes {
+      overflow-x: hidden;
+      .the-line-box {
+        padding: units(20, "rem") 0;
+        @include flex($display: flex, $direction: row, $gap: units(30, "px"));
+        @include prefixer(transition, transform 0.5s ease-in-out);
+
+        .box {
+          flex-grow: 1;
+          min-width: units(350, "px");
+          padding: units(20, "rem");
+          border: 1px solid var(--border-color);
+          background-color: var(--body-bg-color);
+
+          @include flex(
+            $display: flex,
+            $direction: column,
+            $wrap: wrap,
+            $justify: center,
+            $align: center,
+            $gap: units(20, "px")
+          );
+
+          // Title
+          .title {
+            @include flex(
+              $display: flex,
+              $direction: column,
+              $wrap: wrap,
+              $justify: center,
+              $align: center,
+              $gap: units(5, "px")
+            );
+            .name {
+              @include font(
+                $color: var(--head-alt-color),
+                $size: clamp(1.25rem, 1.2055rem + 0.2454vw, 1.5rem),
+                $weight: 700
+              );
+            }
+          }
+        }
+      }
+    }
+
+    .control-container {
+      @include flex(
+        $display: flex,
+        $wrap: wrap,
+        $justify: center,
+        $align: center
+      );
+
+      .controls {
+        @include flex($display: flex, $direction: row, $gap: units(10, "px"));
+        span {
+          @include flex($display: flex, $justify: center, $align: center);
+          background-color: var(--primary-color);
+          color: var(--body-bg-color);
+          width: 50px;
+          height: 30px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@use "../../abstracts/" as *;
+
+.courses-wallpaper {
+  .courses-content {
+    .tab-courses-container {
+      @include flex(
+        $display: flex,
+        $direction: null,
+        $wrap: wrap,
+        $justify: center,
+        $align: center,
+        $gap: units(20, "px")
+      );
+
+      .data {
+        padding: units(14, "rem") units(36, "rem");
+        border: 1px solid var(--border-color);
+        border-radius: units(40, "px");
+        cursor: pointer;
+        @include prefixer(transition, background-color 0.3s ease-in-out);
+
+        .text {
+          @include prefixer(transition, color 0.3s ease-in-out);
+        }
+
+        &.active {
+          background-color: var(--primary-color);
+          color: var(--body-bg-color);
+        }
+
+        &:hover {
+          background-color: var(--primary-color);
+
+          .text {
+            color: var(--body-bg-color);
+          }
+        }
+      }
+    }
+  }
+}

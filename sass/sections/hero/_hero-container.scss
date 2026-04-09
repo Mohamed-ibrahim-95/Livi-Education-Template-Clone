@@ -1,0 +1,82 @@
+@use "../../abstracts/" as *;
+
+.hero-section-container {
+  flex: 1;
+  background-image: url(../images/Pattern-Bg-4.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .container {
+    height: 100%;
+
+    .hero-layout {
+      height: 100%;
+
+      @include flex(
+        $display: flex,
+        $direction: row,
+        $wrap: wrap,
+        $align: center
+      );
+
+      @include media-breakpoints("down", "lg") {
+        padding: units(30, "rem") 0;
+        @include flex($direction: column, $gap: units(30, "px"));
+      }
+
+      @include media-breakpoints("between", "lg", "xxl") {
+        @include flex($wrap: nowrap, $gap: units(30, "px"));
+      }
+
+      // Image + Info ( hero content )
+      %same-property {
+        @include media-breakpoints("up", "lg") {
+          width: units(50, "%");
+        }
+      }
+
+      .hero-contnet {
+        @include flex(
+          $display: flex,
+          $direction: column,
+          $wrap: wrap,
+          $gap: units(35, "px")
+        );
+
+        &.image {
+          position: relative;
+          @extend %same-property;
+          @include media-breakpoints("up", "xxl") {
+            align-self: flex-end;
+          }
+
+          .image-content {
+            position: relative;
+            overflow: hidden;
+
+            &::before {
+              content: "";
+              background: linear-gradient(180deg, #f9b8bd 0%, #fff 100%);
+              width: units(100, "%");
+              height: units(90, "%");
+              position: absolute;
+              left: units(50, "%");
+              top: 20%;
+              border-radius: 50%;
+              @include prefixer(transform, translateX(units(-50, "%")));
+            }
+
+            img {
+              position: relative;
+              z-index: 2;
+            }
+          }
+        }
+
+        &.info {
+          @extend %same-property;
+        }
+      }
+    }
+  }
+}

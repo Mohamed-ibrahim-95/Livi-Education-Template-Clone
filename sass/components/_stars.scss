@@ -1,0 +1,20 @@
+@use "../abstracts/" as *;
+
+.stars {
+  @include flex(
+    $display: flex,
+    $direction: row,
+    $align: center,
+    $gap: units(5, "px")
+  );
+
+  i {
+    &.colored {
+      @include font($color: var(--stars-color));
+    }
+
+    &.solid {
+      @include font($color: var(--border-color));
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@use "../../abstracts/" as *;
+
+// Header Container
+header {
+  position: relative;
+  background-color: var(--tertiary-color);
+
+  @include flex($display: flex, $direction: column, $wrap: wrap);
+
+  @include media-breakpoints("up", "xxl") {
+    height: 100vh;
+  }
+
+  @include media-breakpoints("down", "xxl") {
+    overflow: hidden;
+  }
+
+  .header-section {
+    .header-navigation {
+      background-color: var(--tertiary-color);
+      box-shadow: 0 1px 7px #c9c9c9;
+      position: fixed;
+      left: 0;
+      right: 0;
+      z-index: 100;
+
+      .container {
+        .header_container {
+          @include flex(
+            $display: flex,
+            $direction: row,
+            $wrap: wrap,
+            $justify: space-between,
+            $align: center
+          );
+        }
+      }
+    }
+  }
+}

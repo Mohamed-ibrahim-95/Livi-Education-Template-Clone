@@ -1,0 +1,42 @@
+@use "sass:meta"; // Metadata utilities
+@use "sass:math"; // Mathematical functions
+@use "sass:color"; // Color manipulation
+@use "sass:string"; // String operations
+@use "sass:list"; // List operations
+@use "sass:map"; // Map operations
+@use "sass:selector"; // Selector utilities
+
+@use "../../abstracts/" as *;
+// @use "../../abstracts/" as *;
+
+/* Start - Container */
+
+.container {
+  padding: {
+    left: units(15, px);
+    right: units(15, px);
+  }
+  margin: {
+    left: auto;
+    right: auto;
+  }
+  width: units(100, "%");
+
+  @include media-breakpoints("down", "sm") {
+    max-width: units(100, "%");
+  }
+
+  @each $key, $value in $container-max-widths {
+    @if ($key != "xxxl") {
+      @include media-breakpoints("only", $key) {
+        max-width: $value;
+      }
+    }
+  }
+
+  @include media-breakpoints("up", "xxxl") {
+    max-width: map.get($container-max-widths, "xxxl");
+  }
+}
+
+/* End - Container */

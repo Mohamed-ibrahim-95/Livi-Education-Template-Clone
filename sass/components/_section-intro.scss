@@ -1,0 +1,26 @@
+@use "../abstracts/" as *;
+
+.intro {
+  @include flex(
+    $display: flex,
+    $direction: column,
+    $wrap: wrap,
+    $gap: units(25, "px")
+  );
+  min-width: units(350, "px");
+  max-width: units(913, "px");
+
+  &.center {
+    position: relative;
+    left: units(50, "%");
+    @include prefixer(transform, translateX(units(-50, "%")));
+  }
+
+  &.second {
+    @include flex($gap: units(20, "px"));
+  }
+
+  &.gutter-bottom {
+    margin-bottom: units(50, "px");
+  }
+}

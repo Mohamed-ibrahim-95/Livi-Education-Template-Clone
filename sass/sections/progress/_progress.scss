@@ -1,0 +1,162 @@
+@use "../../abstracts/" as *;
+
+.progress {
+  .progress-container {
+    @include flex(
+      $display: flex,
+      $direction: row,
+      $align: center,
+      $gap: units(70, "px")
+    );
+
+    @include media-breakpoints("down", "lg") {
+      @include flex($direction: column, $align: start);
+    }
+
+    .progress-images {
+      position: relative;
+
+      @include flex($display: flex, $direction: column, $wrap: wrap);
+
+      @include media-breakpoints("down", "xl") {
+        width: 100%;
+      }
+
+      @include media-breakpoints("up", "xl") {
+        flex: 1;
+      }
+
+      .img-box {
+        &.top {
+          margin-top: units(30, "px");
+          margin-left: units(30, "px");
+          z-index: 3;
+
+          @include media-breakpoints("down", "lg") {
+            width: clamp(units(260, "px"), 50vw, units(400, "px"));
+          }
+
+          @include media-breakpoints("up", "lg") {
+            width: clamp(units(200, "px"), 30vw, units(355, "px"));
+          }
+        }
+
+        &.center {
+          align-self: flex-end;
+          z-index: 2;
+
+          @include media-breakpoints("down", "md") {
+            margin-top: units(-10, "%");
+            margin-bottom: units(-42, "%");
+          }
+
+          @include media-breakpoints("only", "md") {
+            margin-top: units(-12, "%");
+            margin-bottom: units(-31, "%");
+            margin-right: units(10, "%");
+          }
+
+          @include media-breakpoints("down", "lg") {
+            width: clamp(units(280, "px"), 60vw, units(400, "px"));
+          }
+
+          @include media-breakpoints("between", "lg", "xxl") {
+            width: clamp(units(285, "px"), 30vw, units(440, "px"));
+            margin-top: units(-12, "%");
+            margin-bottom: units(-41, "%");
+          }
+
+          @include media-breakpoints("up", "xxl") {
+            width: clamp(units(285, "px"), 30vw, units(440, "px"));
+            margin-top: units(-12, "%");
+            margin-bottom: units(-37, "%");
+          }
+        }
+
+        &.bottom {
+          z-index: 1;
+
+          @include media-breakpoints("down", "lg") {
+            width: clamp(units(230, "px"), 50vw, units(400, "px"));
+          }
+
+          @include media-breakpoints("up", "lg") {
+            width: clamp(units(245, "px"), 30vw, units(355, "px"));
+          }
+        }
+      }
+
+      .effective {
+        width: clamp(240px, calc(240px + (270 - 240) * ((100vw - 640px) / (1460 - 640))), 270px);
+        height: auto; 
+        position: absolute;
+        bottom: 0;
+        right: 5%;
+        
+      }
+    }
+
+    .progress-content {
+      @include flex(
+        $display: flex,
+        $direction: column,
+        $wrap: wrap,
+        $gap: units(30, "px")
+      );
+
+      @include media-breakpoints("down", "xl") {
+        width: 100%;
+      }
+      @include media-breakpoints("up", "xl") {
+        flex: 1;
+      }
+
+      .progress-bar-container {
+        @include flex(
+          $display: flex,
+          $direction: column,
+          $wrap: wrap,
+          $gap: units(30, "px")
+        );
+        margin-bottom: units(20, "px");
+
+        .progress-bar {
+          @include flex(
+            $display: flex,
+            $direction: column,
+            $wrap: wrap,
+            $gap: units(10, "px")
+          );
+
+          .progress-head {
+            @include flex(
+              $display: flex,
+              $justify: space-between,
+              $align: center
+            );
+
+            .prog-title,
+            .prog-percentage {
+              @include font(
+                $size: units(20, "rem"),
+                $weight: 500,
+                $status: capitalize
+              );
+            }
+          }
+          .progress-measure {
+            background-color: rgb(238 238 238);
+            height: units(13, "px");
+            overflow: hidden;
+
+            .percentage {
+              display: block;
+              height: units(100, "%");
+              background-color: var(--primary-color);
+            }
+          }
+        }
+      }
+    }
+  }
+}

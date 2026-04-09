@@ -1,0 +1,152 @@
+@use "../../abstracts/" as *;
+
+.form {
+  .form-container {
+    @include flex($display: flex, $gap: units(50, "px"));
+
+    @include media-breakpoints("down", "xl") {
+      @include flex($direction: column);
+    }
+
+    %flex-one {
+      flex: 1;
+    }
+
+    .images-section {
+      @extend %flex-one;
+
+      .desc-section {
+        margin-bottom: units(30, "px");
+      }
+
+      .images {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(units(100, "px"), 1fr));
+        gap: units(12, "rem");
+
+        .image-box {
+          padding: 20px;
+        }
+      }
+    }
+
+    form {
+      background-color: var(--body-bg-color);
+      padding: units(40, "rem");
+      @extend %flex-one;
+
+      .inputs {
+        @include flex($display: flex, $wrap: wrap, $gap: units(20, "px"));
+
+        %same-padding {
+          padding: units(20, "rem") units(25, "rem");
+        }
+
+        %same-flex-basis {
+          flex-basis: 100%;
+        }
+
+        %same-border {
+          border: 1px solid var(--border-color);
+        }
+
+        %same-background-color {
+          background-color: var(--body-bg-color);
+        }
+
+        input[type="text"] {
+          flex: 1;
+        }
+
+        input[type="email"] {
+          @extend %same-flex-basis;
+        }
+
+        input {
+          outline: none;
+          @extend %same-background-color;
+          @extend %same-border;
+          @extend %same-padding;
+          @include font($color: var(--body-txt-color), $size: units(18, "rem"));
+
+          &::placeholder {
+            @include font(
+              $color: var(--body-txt-color),
+              $size: units(18, "rem"),
+              $status: capitalize
+            );
+          }
+        }
+
+        .form-drop-down {
+          @extend %same-flex-basis;
+          .head {
+            @extend %same-background-color;
+            @extend %same-border;
+            @extend %same-padding;
+            @include flex(
+              $display: flex,
+              $direction: row,
+              $justify: space-between,
+              $align: center
+            );
+            cursor: pointer;
+          }
+        }
+
+        .courses {
+          @extend %same-flex-basis;
+
+          .title {
+            display: block;
+            margin-bottom: units(20, "px");
+            @include font($size: units(20, "rem"), $weight: 600);
+          }
+
+          .courses-boxes {
+            @include flex(
+              $display: flex,
+              $direction: row,
+              $wrap: wrap,
+              $align: center,
+              $gap: units(20, "px")
+            );
+            .box {
+              cursor: pointer;
+              @include flex(
+                $display: flex,
+                $direction: row,
+                $align: center,
+                $gap: units(10, "px")
+              );
+              .check {
+                @include same-values((width, height), units(20, "px"));
+                @extend %same-border;
+                @include prefixer(
+                  transition,
+                  background-color 0.5s ease-in-out
+                );
+
+                &.active {
+                  background-color: var(--primary-color);
+                }
+              }
+              .name-course {
+                @include font(
+                  $color: var(--body-txt-color),
+                  $size: units(18, "rem"),
+                  $status: capitalize
+                );
+              }
+            }
+          }
+        }
+
+        .main-button {
+          text-align: center;
+          margin: units(10, "px") 0;
+        }
+      }
+    }
+  }
+}

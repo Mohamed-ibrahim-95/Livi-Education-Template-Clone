@@ -1,0 +1,45 @@
+// Importing core SASS modules for extended functionality and better organization
+@use "sass:meta"; // Metadata utilities
+@use "sass:math"; // Mathematical functions
+@use "sass:color"; // Color manipulation
+@use "sass:string"; // String operations
+@use "sass:list"; // List operations
+@use "sass:map"; // Map operations
+@use "sass:selector"; // Selector utilities
+
+@use "./variables" as *;
+
+// @function up-down
+// This function determines the CSS media query based on the given media type ("up" or "down") and breakpoint.
+@function up-down($media, $breakpoint) {
+  $width: map.get(
+    $map: $grid-breakpoints,
+    $key: $breakpoint,
+  );
+  @if ($breakpoint != "xs") {
+    @if ($media == "up") {
+      @return "min-width: #{$width}";
+    } @else if ($media == "down") {
+      @return "max-width: #{calc($width - $subtract)}";
+    } @else {
+      @return null;
+    }
+  } @else {
+    @return null;
+  }
+  @return null;
+}
+
+// This function converts a given size value into either "rem" or "px" units.
+@function units($value, $type) {
+  @if ($type == "rem") {
+    $val: math.div($value, 16);
+    @return #{$val}#{$type};
+  } @else if ($type == "%") {
+    @return #{$value}#{$type};
+  } @else if ($type == "px") {
+    @return #{$value}#{$type};
+  } @else {
+    @return null;
+  }
+}

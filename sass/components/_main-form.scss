@@ -1,0 +1,55 @@
+@use "../abstracts/" as *;
+
+.main-form {
+  // %same-property {
+  //   border-radius: units(5, "px");
+  //   border: none;
+  //   outline: none;
+  // }
+
+  form {
+    background-color: var(--body-bg-color);
+    padding: units(5, "rem");
+    border: 1px solid transparent;
+    border-radius: units(7, "px");
+    @include flex($display: flex, $direction: row);
+    @include prefixer(transition, border 0.3s ease-in-out);
+
+    &.colored {
+      border: 1px solid var(--border-color);
+    }
+
+    &:focus-within {
+      border: 1px solid var(--primary-color);
+    }
+
+    input {
+      &[type="email"] {
+        padding: 0 units(10, "rem");
+        flex: 1;
+        border-radius: units(5, "px");
+        border: none;
+        outline: none;
+        &::placeholder {
+          @include font($color: #b6b6b6, $size: units(17, "rem"));
+        }
+      }
+
+      // &[type="submit"] {
+      //   @include font($size: units(16, "rem"));
+      //   padding: units(14, "rem") units(24, "rem");
+      //   background-color: var(--primary-color);
+      //   cursor: pointer;
+      //   @extend %same-property;
+      //   @include font($color: var(--body-bg-color), $size: var(16, "rem"));
+      // }
+    }
+  }
+}
+
+// <div class="main-form">
+// <form action="">
+//   <input type="email" placeholder="Enter Your Email" />
+//   <input type="submit" value="Subscribe" />
+// </form>
+// </div>

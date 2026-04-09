@@ -1,0 +1,2326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/logo.svg" />
+    <title>Livi - Clone</title>
+
+    <!-- Google Fonts -->
+    <!-- Manrope Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Noto+Naskh+Arabic:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="vendors/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- Header section start -->
+    <header>
+      <div class="header-section">
+        <div class="header-navigation">
+          <div class="container">
+            <div class="header_container">
+              <!-- Logo -->
+              <div class="logo_section">
+                <img class="img" src="images/logo.svg" alt="logo" />
+              </div>
+
+              <!-- Nav -->
+              <!-- Main Navigation Bar - Container for the entire navigation system -->
+              <div class="nav menu-container">
+                <!-- Navigation Wrapper - Contains all menu elements -->
+                <div class="navWrapper">
+                  <!-- Main Menu - Primary navigation list -->
+                  <ul class="mainMenu">
+                    <!-- Mobile Navigation Controls - Only visible on mobile devices -->
+                    <li class="navControls closeMainNav">
+                      <div class="closeNav">
+                        <i class="fa-solid fa-xmark fa-lg"></i>
+                      </div>
+                    </li>
+
+                    <!-- Home Link - First item in the main navigation -->
+                    <li class="menuItem listNavElement firstMenuItem">
+                      <a href="#" class="link menuLink">home</a>
+                    </li>
+
+                    <!-- Pages Dropdown - Parent container for pages submenu -->
+                    <li class="menuItem listNavElement dropdownParent">
+                      <a href="#" class="link menuLink hasSubmenu openSubmenu">
+                        <span class="linkText">pages</span>
+                        <i class="fa-solid fa-angle-down"></i>
+                      </a>
+
+                      <!-- Pages Submenu - First level dropdown menu -->
+                      <ul class="submenu rounded-shadow menu-container">
+                        <!-- Mobile Submenu Controls - Back and close buttons for mobile view -->
+                        <li class="navControls">
+                          <div class="goBack">
+                            <i class="fa-solid fa-angle-left fa-lg"></i>
+                          </div>
+                          <div class="closeNav">
+                            <i class="fa-solid fa-xmark fa-lg"></i>
+                          </div>
+                        </li>
+
+                        <!-- Pages Submenu Items - Individual page links -->
+                        <li class="submenuItem listNavElement">
+                          <a href="#" class="link submenuLink">
+                            <span class="linkText">about us</span>
+                          </a>
+                        </li>
+                        <li class="submenuItem listNavElement">
+                          <a href="#" class="link submenuLink">
+                            <span class="linkText">frequent QA's</span>
+                          </a>
+                        </li>
+                        <li class="submenuItem listNavElement">
+                          <a href="#" class="link submenuLink">
+                            <span class="linkText">pricing plan</span>
+                          </a>
+                        </li>
+
+                        <!-- Events Nested Dropdown - Second level dropdown parent -->
+                        <li class="submenuItem listNavElement dropdownParent">
+                          <a
+                            href="#"
+                            class="link submenuLink hasSubmenu childSubmenu openSubmenu"
+                          >
+                            <span class="linkText">events</span>
+                            <i class="fa-solid fa-angle-right"></i>
+                          </a>
+
+                          <!-- Events Nested Submenu - Second level dropdown menu -->
+                          <ul
+                            class="submenu rounded-shadow nestedSubmenu menu-container"
+                          >
+                            <!-- Mobile Nested Submenu Controls - Back and close buttons for mobile view -->
+                            <li class="navControls">
+                              <div class="goBack">
+                                <i class="fa-solid fa-angle-left fa-lg"></i>
+                              </div>
+                              <div class="closeNav">
+                                <i class="fa-solid fa-xmark fa-lg"></i>
+                              </div>
+                            </li>
+
+                            <!-- Events Submenu Items - Individual event links -->
+                            <li class="submenuItem listNavElement">
+                              <a href="#" class="link submenuLink">
+                                <span class="linkText">events listing</span>
+                              </a>
+                            </li>
+                            <li class="submenuItem listNavElement">
+                              <a href="#" class="link submenuLink">
+                                <span class="linkText">events details</span>
+                              </a>
+                            </li>
+                            <li class="submenuItem listNavElement">
+                              <a href="#" class="link submenuLink">
+                                <span class="linkText">events schedule</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </li>
+
+                        <!-- Additional Pages Submenu Items -->
+                        <li class="submenuItem listNavElement">
+                          <a href="#" class="link submenuLink">
+                            <span class="linkText">Services Listing</span>
+                          </a>
+                        </li>
+                        <li class="submenuItem listNavElement">
+                          <a href="#" class="link submenuLink">
+                            <span class="linkText">registration & login</span>
+                          </a>
+                        </li>
+                        <li class="submenuItem listNavElement">
+                          <a href="#" class="link submenuLink">
+                            <span class="linkText">404 page</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <!-- Main Menu Items - Additional top-level navigation links -->
+                    <li class="menuItem listNavElement">
+                      <a href="#" class="link menuLink">lms shortcodes</a>
+                    </li>
+                    <li class="menuItem listNavElement">
+                      <a href="#" class="link menuLink">courses</a>
+                    </li>
+                    <li class="menuItem listNavElement">
+                      <a href="#" class="link menuLink">blog</a>
+                    </li>
+                    <li class="menuItem listNavElement">
+                      <a href="#" class="link menuLink">help center</a>
+                    </li>
+
+                    <!-- underline -->
+                  </ul>
+                </div>
+              </div>
+
+              <!-- support-promo-section [section-blur]-->
+              <div class="support">
+                <div class="support-promo-section">
+                  <!-- close button container -->
+                  <div class="close-button-container">
+                    <div class="close-button">
+                      <div class="x-mark"></div>
+                    </div>
+                  </div>
+                  <!-- brand-logo + social-icons  -->
+                  <div class="header-support">
+                    <div class="logo_section">
+                      <img class="img" src="images/logo.svg" alt="logo" />
+                    </div>
+
+                    <!-- Social Media Icons -->
+                    <div class="social-icons">
+                      <a href="" class="brand">
+                        <i class="fa-brands fa-facebook-f fa-lg"></i>
+                      </a>
+                      <a href="" class="brand">
+                        <i class="fa-brands fa-instagram fa-lg"></i>
+                      </a>
+                      <a href="" class="brand">
+                        <i class="fa-brands fa-x-twitter fa-lg"></i>
+                      </a>
+                      <a href="" class="brand">
+                        <i class="fa-brands fa-youtube fa-lg"></i>
+                      </a>
+                    </div>
+
+                    <!-- Through Line-->
+                    <span class="through-line"></span>
+                  </div>
+                  <!-- intro-text -->
+                  <div class="main-text">
+                    <p class="p-main-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Consequatur sed explicabo aliquid a? Repudiandae,
+                      reprehenderit.
+                    </p>
+                  </div>
+                  <!-- phone-contact + whatsapp-contact + whatsapp-qr -->
+                  <div class="contact-info-container">
+                    <div class="contact phone-contact">
+                      <div class="icon icon-phone">
+                        <i class="fa-solid fa-headphones-simple fa-3x"></i>
+                      </div>
+                      <div class="text text-phone">
+                        <p class="p-main-text">
+                          Call Us To <span>9123-456-7890</span> Or From Abroad
+                          at <span>+1 607-345-6789</span>.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="through-line"></div>
+
+                    <div class="contact whatsapp-contact">
+                      <div class="icon icon-whatsapp">
+                        <i class="fa-brands fa-whatsapp fa-3x"></i>
+                      </div>
+                      <div class="text text-whatsapp">
+                        <div class="text-whatsapp-inner">
+                          <h5>Join Us on WhatsApp</h5>
+                          <p class="p-main-text">
+                            We're here to assist you! Scan the QR code to open
+                            WhatsApp Web.
+                          </p>
+                        </div>
+                        <div class="qr-image">
+                          <!-- <i class="fa-solid fa-qrcode fa-6x"></i> -->
+                          <img src="images/fake-qr.png" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- promo-title + subscribe-form + privacy-text -->
+                  <div class="promo-subscribe-container over">
+                    <div class="overlay">
+                      <div class="title">
+                        <h5>Unlock 15% Off Your Next Purchase!</h5>
+                      </div>
+                      <div class="main-form">
+                        <form action="">
+                          <input type="email" placeholder="Enter Your Email" />
+                          <input
+                            type="submit"
+                            class="main-button"
+                            value="Subscribe"
+                          />
+                        </form>
+                      </div>
+                      <div class="footer">
+                        <p>
+                          By clicking “Subscribe”, you agree to our
+                          <a href="">Privacy Policy.</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- utilty -->
+              <div class="utilityBar">
+                <div class="iconBox searchBox">
+                  <i
+                    class="fa-solid fa-magnifying-glass fa-lg utilityIcon searchIcon"
+                  ></i>
+                </div>
+                <div class="iconBox userBox">
+                  <i class="fa-solid fa-user fa-lg utilityIcon userIcon"></i>
+                </div>
+                <div class="iconBox cartBox">
+                  <i
+                    class="fa-solid fa-shopping-cart fa-lg utilityIcon cartIcon"
+                  ></i>
+                </div>
+                <div class="iconBox toggleBox">
+                  <i class="fa-solid fa-bars fa-lg utilityIcon toggleIcon"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero section start -->
+      <section class="hero-section-container">
+        <div class="container">
+          <div class="hero-layout">
+            <!-- Image -->
+            <div class="hero-contnet image">
+              <div class="image-content">
+                <img src="images/Demo-1-Slider-Image-B.png" alt="" />
+              </div>
+              <!-- Stat -->
+              <div class="stat-container column floating top d-none">
+                <div class="stat-image">
+                  <div class="img-icon">
+                    <img src="images/student.png" alt="student" />
+                  </div>
+                </div>
+                <div class="stat-content">
+                  <div class="stat-number"><span>56K</span></div>
+                  <div class="stat-title"><span>total students</span></div>
+                </div>
+              </div>
+              <!-- Stat -->
+              <div class="stat-container floating bottom bottom-zero">
+                <div class="stat-image">
+                  <div class="img-icon">
+                    <img src="images/online-education.png" alt="courses" />
+                  </div>
+                </div>
+                <div class="stat-content">
+                  <div class="stat-number"><span>56K</span></div>
+                  <div class="stat-title"><span>total students</span></div>
+                </div>
+              </div>
+            </div>
+            <!-- Info -->
+            <div class="hero-contnet info">
+              <!-- Main intro -->
+              <div class="intro">
+                <div class="main-title">
+                  <span class="top-line"></span>
+                  <h1>
+                    the worlds best online
+                    <span class="colored-text">education</span>
+                    <span class="colored-text">institude</span>
+                  </h1>
+                </div>
+
+                <p class="p-main-text">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius
+                  velit minima delectus cupiditate consectetur ad dolorum
+                  architecto libero iste omnis beatae atque, quasi molestiae
+                  commodi!
+                </p>
+              </div>
+
+              <!-- Main Form -->
+              <div class="main-form">
+                <form action="" class="colored">
+                  <input type="email" placeholder="Enter Your Email" />
+                  <input type="submit" class="main-button" value="Subscribe" />
+                </form>
+
+                <!-- Starts Icon -->
+                <div class="stars">
+                  <i class="fa-solid fa-star fa-sm colored"></i>
+                  <i class="fa-solid fa-star fa-sm colored"></i>
+                  <i class="fa-solid fa-star fa-sm colored"></i>
+                  <i class="fa-solid fa-star fa-sm colored"></i>
+                  <i class="fa-solid fa-star fa-sm colored"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Hero section end -->
+    </header>
+    <!-- Header section end -->
+
+    <!-- Categories section start -->
+    <section class="categories-container main-background main-padding">
+      <div class="container">
+        <div class="categories">
+          <!-- Intro -->
+          <div class="intro center gutter-bottom">
+            <div class="main-title center">
+              <span class="top-line"></span>
+              <h1 class="small">
+                explore top
+                <span class="colored-text">courses</span>
+                <span class="colored-text">categories</span>
+              </h1>
+            </div>
+
+            <p class="p-main-text center">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius
+              velit minima delectus cupiditate consectetur ad dolorum architecto
+              libero iste omnis beatae atque, quasi molestiae commodi!
+            </p>
+          </div>
+
+          <!-- Categories -->
+          <div class="categories-boxs">
+            <!-- Start Boxes -->
+            <div class="box main-hover-effect">
+              <div class="box-content">
+                <div class="cat-icon">
+                  <img src="images/layers.png" alt="art illustration" />
+                </div>
+                <div class="cat-title"><a href="#">art illustration</a></div>
+                <div class="cat-info">
+                  <p class="p-main-text center">3 courses</p>
+                </div>
+              </div>
+              <!-- Arrow Box -->
+              <div class="arrow-container">
+                <span class="arrow"
+                  ><i class="fa-solid fa-arrow-right"></i
+                ></span>
+              </div>
+            </div>
+
+            <div class="box main-hover-effect">
+              <div class="box-content">
+                <div class="cat-icon">
+                  <img src="images/advertising.png" alt="advertising" />
+                </div>
+                <div class="cat-title"><a href="#">digital marketing</a></div>
+                <div class="cat-info">
+                  <p class="p-main-text center">5 courses</p>
+                </div>
+              </div>
+              <!-- Arrow Box -->
+              <div class="arrow-container">
+                <span class="arrow"
+                  ><i class="fa-solid fa-arrow-right"></i
+                ></span>
+              </div>
+            </div>
+
+            <div class="box main-hover-effect">
+              <div class="box-content">
+                <div class="cat-icon">
+                  <img
+                    src="images/graphic-designer.png"
+                    alt="graphic designer"
+                  />
+                </div>
+                <div class="cat-title"><a href="#">graphic design</a></div>
+                <div class="cat-info">
+                  <p class="p-main-text center">2 courses</p>
+                </div>
+              </div>
+              <!-- Arrow Box -->
+              <div class="arrow-container">
+                <span class="arrow"
+                  ><i class="fa-solid fa-arrow-right"></i
+                ></span>
+              </div>
+            </div>
+
+            <div class="box main-hover-effect">
+              <div class="box-content">
+                <div class="cat-icon">
+                  <img src="images/photography.png" alt="photography" />
+                </div>
+                <div class="cat-title"><a href="#">photography</a></div>
+                <div class="cat-info">
+                  <p class="p-main-text center">2 courses</p>
+                </div>
+              </div>
+              <!-- Arrow Box -->
+              <div class="arrow-container">
+                <span class="arrow"
+                  ><i class="fa-solid fa-arrow-right"></i
+                ></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Categories section end -->
+
+    <!-- Program advantages start -->
+    <section class="advantages-container main-background main-padding">
+      <div class="container">
+        <div class="advantages">
+          <!-- Contnet -->
+          <div class="advantages-content">
+            <!-- Numbers Boxs -->
+            <div class="number-boxes">
+              <!-- intro Start -->
+              <div class="intro second">
+                <div class="main-title">
+                  <span class="top-line"></span>
+                  <h1 class="small">
+                    advantages of
+                    <span class="colored-text">our</span>
+                    <span class="colored-text">program</span>
+                  </h1>
+                </div>
+
+                <p class="p-main-text">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius
+                  velit minima delectus cupiditate consectetur ad dolorum
+                  architecto libero iste omnis beatae atque, quasi molestiae
+                  commodi!
+                </p>
+              </div>
+              <!-- intro End -->
+
+              <div class="boxes">
+                <div class="box">
+                  <div class="box-image">
+                    <img src="images/book.png" alt="courses" />
+                  </div>
+                  <div class="box-content">
+                    <span class="num">99M</span>
+                    <p class="p-main-text">
+                      Et sollicitudin ac orci phasellus. Eu mi bibendum neque.
+                    </p>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="box">
+                  <div class="box-image">
+                    <img src="images/memo.png" alt="courses" />
+                  </div>
+                  <div class="box-content">
+                    <span class="num">9/10 </span>
+                    <p class="p-main-text">
+                      Et sollicitudin ac orci phasellus. Eu mi bibendum neque.
+                    </p>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="box">
+                  <div class="box-image">
+                    <img src="images/laptop.png" alt="courses" />
+                  </div>
+                  <div class="box-content">
+                    <span class="num">95%</span>
+                    <p class="p-main-text">
+                      Et sollicitudin ac orci phasellus. Eu mi bibendum neque.
+                    </p>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="box">
+                  <div class="box-image">
+                    <img src="images/laptop2.png" alt="courses" />
+                  </div>
+                  <div class="box-content">
+                    <span class="num">50K</span>
+                    <p class="p-main-text">
+                      Et sollicitudin ac orci phasellus. Eu mi bibendum neque.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- support panel	 -->
+              <div class="support-panel">
+                <a href="#" class="main-button">explore more</a>
+                <div class="media-group">
+                  <div class="media-group-img rounded-circle">
+                    <img
+                      src="images/home-1-advantage-helper-image.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="media-group-content">
+                    <p class="p-main-text">Questions?</p>
+                    <span>consult our support</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Images -->
+            <div class="advantages-images">
+              <div class="images-container">
+                <div class="img-box image-scale">
+                  <div class="box-scale radius-top">
+                    <img src="images/Teach-Img-2.jpg" class="scale" />
+                  </div>
+                </div>
+                <div class="img-box mr-top image-scale">
+                  <div class="box-scale radius-bottom">
+                    <img src="images/Teach-Img-4.jpg" class="scale" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Program advantages end -->
+
+    <section class="courses-wallpaper main-background main-padding">
+      <div class="container">
+        <div class="courses-content">
+          <!-- Main Intro Start -->
+          <div class="intro center second">
+            <div class="main-title center">
+              <span class="top-line"></span>
+              <h1 class="small">
+                Our Programs &
+                <span class="colored-text">Accreditation</span>
+              </h1>
+            </div>
+
+            <p class="p-main-text center">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius
+              velit minima delectus cupiditate consectetur ad dolorum architecto
+              libero iste omnis beatae atque, quasi molestiae commodi!
+            </p>
+          </div>
+          <!-- Main Intro End -->
+
+          <!-- Tabs Start -->
+          <div class="tab-courses-container">
+            <div class="data active" data-type="all">
+              <span class="text" data-type="all">all</span>
+            </div>
+            <div class="data" data-type="illustration">
+              <span class="text">art illustration</span>
+            </div>
+            <div class="data" data-type="marketing">
+              <span class="text">digital marketing</span>
+            </div>
+            <div class="data" data-type="photography">
+              <span class="text">photography</span>
+            </div>
+          </div>
+          <!-- Tabs End -->
+
+          <!-- Courses Boxes Start-->
+          <div class="courses-box-container">
+            <div class="course-box main-hover-effect image-scale illustration">
+              <!-- Header -->
+              <div class="box-header">
+                <div class="box-header-image box-scale radius-5">
+                  <img src="images/course-image-01.jpg" class="scale" alt="" />
+                </div>
+              </div>
+              <!-- Meta info -->
+              <div class="course-meta">
+                <div class="meta-item meta-date">
+                  <span class="meta-label"
+                    ><i class="fa-solid fa-clock-rotate-left"></i
+                  ></span>
+                  <span class="meta-value">15 Jan, 2023</span>
+                </div>
+
+                <div class="meta-item meta-curriculum">
+                  <span class="meta-label"
+                    ><i class="fa-regular fa-bookmark"></i
+                  ></span>
+                  <span class="meta-value">5 Modules</span>
+                </div>
+
+                <div class="meta-item meta-students">
+                  <span class="meta-label"
+                    ><i class="fa-solid fa-user"></i
+                  ></span>
+                  <span class="meta-value">24 Students</span>
+                </div>
+              </div>
+
+              <!-- Courses title -->
+              <div class="courses-title">
+                <h5 class="secondary-heading">Art Basics</h5>
+              </div>
+
+              <!-- Courses description -->
+              <div class="courses-description">
+                <p class="p-main-text">
+                  Master the basics of DSLR photography, from aperture settings
+                  to composition techniques...
+                </p>
+              </div>
+
+              <!-- Through-line -->
+              <div class="through-line"></div>
+
+              <!-- courses footer -->
+              <div class="courses-footer">
+                <div class="product-meta">
+                  <div class="product-meta-stars">
+                    <div class="stars">
+                      <i class="fa-solid fa-star fa-sm colored"></i>
+                      <i class="fa-solid fa-star fa-sm colored"></i>
+                      <i class="fa-solid fa-star fa-sm colored"></i>
+                      <i class="fa-solid fa-star fa-sm solid"></i>
+                      <i class="fa-solid fa-star fa-sm solid"></i>
+                      <span class="total">(3.5)</span>
+                    </div>
+                    <span class="price">$29</span>
+                  </div>
+                  <a href="#" class="main-button center-text fill"
+                    >explore more</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Box -->
+            <div class="course-box main-hover-effect image-scale illustration">
+              <!-- Header -->
+              <div class="box-header">
+                <div class="box-header-image box-scale radius-5">
+                  <img src="images/course-image-02.jpg" class="scale" alt="" />
+                </div>
+              </div>
+              <!-- Meta info -->
+              <div class="course-meta">
+                <div class="meta-item meta-date">
+                  <span class="meta-label"
+                    ><i class="fa-solid fa-clock-rotate-left"></i
+                  ></span>
+                  <span class="meta-value">03 Mar, 2023</span>
+                </div>
+
+                <div class="meta-item meta-curriculum">
+                  <span class="meta-label"
+                    ><i class="fa-regular fa-bookmark"></i
+                  ></span>
+                  <span class="meta-value">8 Curriculum</span>
+                </div>
+
+                <div class="meta-item meta-students">
+                  <span class="meta-label"
+                    ><i class="fa-solid fa-user"></i
+                  ></span>
+                  <span class="meta-value">47 Students</span>
+                </div>
+              </div>
+
+              <!-- Courses title -->
+              <div class="courses-title">
+                <h5 class="secondary-heading">Story Illustration</h5>
+              </div>
+
+              <!-- Courses description -->
+              <div class="courses-description">
+                <p class="p-main-text">
+                  Comprehensive guide to Python, machine learning algorithms,
+                  and data visualization tools...
+                </p>
+              </div>
+
+              <!-- Through-line -->
+              <div class="through-line"></div>
+
+              <!-- courses footer -->
+              <div class="courses-footer">
+                <div class="product-meta">
+                  <div class="product-meta-stars">
+                    <div class="stars">
+                      <i class="fa-solid fa-star fa-sm colored"></i>
+                      <i class="fa-solid fa-star fa-sm colored"></i>
+                      <i class="fa-solid fa-star fa-sm colored"></i>
+                      <i class="fa-solid fa-star fa-sm colored"></i>
+                      <i class="fa-solid fa-star fa-sm colored"></i>
+                      <span class="total">(5)</span>
+                    </div>
+                    <span class="price">$99</span>
+                  </div>
+                  <a href="#" class="main-button center-text fill"
+                    >explore more</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Box -->
+            <div class="course-box main-hover-effect image-scale illustration">
+              <!-- Header -->
+              <div class="box-header">
+                <div class="box-header-image box-scale radius-5">
+                  <img src="images/course-image-03.jpg" class="scale" alt="" />
+                </div>
+              </div>
+              <!-- Meta info -->
+              <div class="course-meta">
+                <div class="meta-item meta-date">
+                  <span class="meta-label"
+                    ><i class="fa-solid fa-clock-rotate-left"></i
+                  ></span>
+                  <span class="meta-value">10 Feb, 2023</span>
+                </div>
+
+                <div class="meta-item meta-curriculum">
+                  <span class="meta-label"
+                    ><i class="fa-regular fa-bookmark"></i
+                  ></span>
+                  <span class="meta-value">6 Sessions</span>
+                </div>
+
+                <div class="meta-item meta-students">
+                  <span class="meta-label"
+                    ><i class="fa-solid fa-user"></i
+                  ></span>
+                  <span class="meta-value">32 Students</span>
+                </div>
+              </div>
+
+              <!-- Courses title -->
+              <div class="courses-title">
+                <h5 class="secondary-heading">Character Design</h5>
+              </div>
+
+              <!-- Courses description -->
+              <div class="courses-description">
+                <p class="p-main-text">
+                  Learn foundational yoga poses, breathing techniques, and
+                  mindfulness practices...
+                </p>
+              </div>
+
+              <!-- Through-line -->
+              <div class="through-line"></div>
+
+              <!-- courses footer -->
+              <div class="courses-footer">
+                <div class="product-meta">
+                  <div class="product-meta-stars">
+                    <div class="stars">
+                      <i class="fa-solid fa-star fa-sm colored"></i>
+                      <i class="fa-solid fa-star fa-sm colored"></i>
+                      <i class="fa-solid fa-star fa-sm colored"></i>
+                      <i class="fa-solid fa-star fa-sm colored"></i>
+                      <i class="fa-solid fa-star fa-sm solid"></i>
+                      <span class="total">(4.2)</span>
+                    </div>
+                    <span class="price">$15</span>
+                  </div>
+                  <a href="#" class="main-button center-text fill"
+                    >explore more</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Box -->
+            <div class="course-box main-hover-effect image-scale marketing">
+              <!-- Header -->
+              <div class="box-header">
+                <div class="box-header-image box-scale radius-5">
+                  <img src="images/course-image-04.jpg" class="scale" alt="" />
+                </div>
+              </div>
+              <!-- Meta info -->
+              <div class="course-meta">
+                <div class="meta-item meta-date">
+                  <span class="meta-label"
+                    ><i class="fa-solid fa-clock-rotate-left"></i
+                  ></span>
+                  <span class="meta-value">22 Apr, 2023</span>
+                </div>
+
+                <div class="meta-item meta-curriculum">
+                  <span class="meta-label"
+                    ><i class="fa-regular fa-bookmark"></i
+                  ></span>
+                  <span class="meta-value">4 Modules</span>
+                </div>
+
+                <div class="meta-item meta-students">
+                  <span class="meta-label"
+                    ><i class="fa-solid fa-user"></i
+                  ></span>
+                  <span class="meta-value">18 Students</span>
+                </div>
+              </div>
+
+              <!-- Courses title -->
+              <div class="courses-title">
+                <h5 class="secondary-heading">Social Marketing</h5>
+              </div>
+
+              <!-- Courses description -->
+              <div class="courses-description">
+                <p class="p-main-text">
+                  Essential strategies for budgeting, saving, and investing for
+                  your future...
+                </p>
+              </div>
+
+              <!-- Through-line -->
+              <div class="through-line"></div>
+
+              <!-- courses footer -->
+              <div class="courses-footer">
+                <div class="product-meta">
+                  <div class="product-meta-stars">
+                    <div class="stars">
+                      <i class="fa-solid fa-star fa-sm colored"></i>
+                      <i class="fa-solid fa-star fa-sm colored"></i>
+                      <i class="fa-solid fa-star fa-sm solid"></i>
+                      <i class="fa-solid fa-star fa-sm solid"></i>
+                      <i class="fa-solid fa-star fa-sm solid"></i>
+                      <span class="total">(2)</span>
+                    </div>
+                    <span class="price">$25</span>
+                  </div>
+                  <a href="#" class="main-button center-text fill"
+                    >explore more</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Box -->
+            <div class="course-box main-hover-effect image-scale marketing">
+              <!-- Header -->
+              <div class="box-header">
+                <div class="box-header-image box-scale radius-5">
+                  <img src="images/course-image-05.jpg" class="scale" alt="" />
+                </div>
+              </div>
+              <!-- Meta info -->
+              <div class="course-meta">
+                <div class="meta-item meta-date">
+                  <span class="meta-label"
+                    ><i class="fa-solid fa-clock-rotate-left"></i
+                  ></span>
+                  <span class="meta-value">05 May, 2023</span>
+                </div>
+
+                <div class="meta-item meta-curriculum">
+                  <span class="meta-label"
+                    ><i class="fa-regular fa-bookmark"></i
+                  ></span>
+                  <span class="meta-value">7 Projects</span>
+                </div>
+
+                <div class="meta-item meta-students">
+                  <span class="meta-label"
+                    ><i class="fa-solid fa-user"></i
+                  ></span>
+                  <span class="meta-value">56 Students</span>
+                </div>
+              </div>
+
+              <!-- Courses title -->
+              <div class="courses-title">
+                <h5 class="secondary-heading">Content Strategy</h5>
+              </div>
+
+              <!-- Courses description -->
+              <div class="courses-description">
+                <p class="p-main-text">
+                  From typography to color theory, master Adobe Creative Suite
+                  with hands-on projects...
+                </p>
+              </div>
+
+              <!-- Through-line -->
+              <div class="through-line"></div>
+
+              <!-- courses footer -->
+              <div class="courses-footer">
+                <div class="product-meta">
+                  <div class="product-meta-stars">
+                    <div class="stars">
+                      <i class="fa-solid fa-star fa-sm colored"></i>
+                      <i class="fa-solid fa-star fa-sm colored"></i>
+                      <i class="fa-solid fa-star fa-sm colored"></i>
+                      <i class="fa-solid fa-star fa-sm colored"></i>
+                      <i class="fa-solid fa-star fa-sm colored"></i>
+                      <span class="total">(5)</span>
+                    </div>
+                    <span class="price">$49</span>
+                  </div>
+                  <a href="#" class="main-button center-text fill"
+                    >explore more</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Box -->
+            <div class="course-box main-hover-effect image-scale photography">
+              <!-- Header -->
+              <div class="box-header">
+                <div class="box-header-image box-scale radius-5">
+                  <img src="images/course-image-06.jpg" class="scale" alt="" />
+                </div>
+              </div>
+              <!-- Meta info -->
+              <div class="course-meta">
+                <div class="meta-item meta-date">
+                  <span class="meta-label"
+                    ><i class="fa-solid fa-clock-rotate-left"></i
+                  ></span>
+                  <span class="meta-value">12 Jun, 2023</span>
+                </div>
+
+                <div class="meta-item meta-curriculum">
+                  <span class="meta-label"
+                    ><i class="fa-regular fa-bookmark"></i
+                  ></span>
+                  <span class="meta-value">5 Workshops</span>
+                </div>
+
+                <div class="meta-item meta-students">
+                  <span class="meta-label"
+                    ><i class="fa-solid fa-user"></i
+                  ></span>
+                  <span class="meta-value">29 Students</span>
+                </div>
+              </div>
+
+              <!-- Courses title -->
+              <div class="courses-title">
+                <h5 class="secondary-heading">Digital Photography</h5>
+              </div>
+
+              <!-- Courses description -->
+              <div class="courses-description">
+                <p class="p-main-text">
+                  Overcome stage fright and deliver compelling presentations
+                  with confidence...
+                </p>
+              </div>
+
+              <!-- Through-line -->
+              <div class="through-line"></div>
+
+              <!-- courses footer -->
+              <div class="courses-footer">
+                <div class="product-meta">
+                  <div class="product-meta-stars">
+                    <div class="stars">
+                      <i class="fa-solid fa-star fa-sm colored"></i>
+                      <i class="fa-solid fa-star fa-sm colored"></i>
+                      <i class="fa-solid fa-star fa-sm colored"></i>
+                      <i class="fa-solid fa-star fa-sm solid"></i>
+                      <i class="fa-solid fa-star fa-sm solid"></i>
+                      <span class="total">(3.8)</span>
+                    </div>
+                    <span class="price">$35</span>
+                  </div>
+                  <a href="#" class="main-button center-text fill"
+                    >explore more</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Box -->
+            <div class="course-box main-hover-effect image-scale photography">
+              <!-- Header -->
+              <div class="box-header">
+                <div class="box-header-image box-scale radius-5">
+                  <img src="images/course-image-07.jpg" class="scale" alt="" />
+                </div>
+              </div>
+              <!-- Meta info -->
+              <div class="course-meta">
+                <div class="meta-item meta-date">
+                  <span class="meta-label"
+                    ><i class="fa-solid fa-clock-rotate-left"></i
+                  ></span>
+                  <span class="meta-value">30 Jul, 2023</span>
+                </div>
+
+                <div class="meta-item meta-curriculum">
+                  <span class="meta-label"
+                    ><i class="fa-regular fa-bookmark"></i
+                  ></span>
+                  <span class="meta-value">9 Lessons</span>
+                </div>
+
+                <div class="meta-item meta-students">
+                  <span class="meta-label"
+                    ><i class="fa-solid fa-user"></i
+                  ></span>
+                  <span class="meta-value">41 Students</span>
+                </div>
+              </div>
+
+              <!-- Courses title -->
+              <div class="courses-title">
+                <h5 class="secondary-heading">Portrait Photography</h5>
+              </div>
+
+              <!-- Courses description -->
+              <div class="courses-description">
+                <p class="p-main-text">
+                  Build cross-platform apps using React Native with practical
+                  real-world examples...
+                </p>
+              </div>
+
+              <!-- Through-line -->
+              <div class="through-line"></div>
+
+              <!-- courses footer -->
+              <div class="courses-footer">
+                <div class="product-meta">
+                  <div class="product-meta-stars">
+                    <div class="stars">
+                      <i class="fa-solid fa-star fa-sm colored"></i>
+                      <i class="fa-solid fa-star fa-sm colored"></i>
+                      <i class="fa-solid fa-star fa-sm colored"></i>
+                      <i class="fa-solid fa-star fa-sm colored"></i>
+                      <i class="fa-solid fa-star fa-sm solid"></i>
+                      <span class="total">(4.5)</span>
+                    </div>
+                    <span class="price">$79</span>
+                  </div>
+                  <a href="#" class="main-button center-text fill"
+                    >explore more</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Box -->
+            <div class="course-box main-hover-effect image-scale photography">
+              <!-- Header -->
+              <div class="box-header">
+                <div class="box-header-image box-scale radius-5">
+                  <img src="images/course-image-08.jpg" class="scale" alt="" />
+                </div>
+              </div>
+              <!-- Meta info -->
+              <div class="course-meta">
+                <div class="meta-item meta-date">
+                  <span class="meta-label"
+                    ><i class="fa-solid fa-clock-rotate-left"></i
+                  ></span>
+                  <span class="meta-value">18 Aug, 2023</span>
+                </div>
+
+                <div class="meta-item meta-curriculum">
+                  <span class="meta-label"
+                    ><i class="fa-regular fa-bookmark"></i
+                  ></span>
+                  <span class="meta-value">6 Chapters</span>
+                </div>
+
+                <div class="meta-item meta-students">
+                  <span class="meta-label"
+                    ><i class="fa-solid fa-user"></i
+                  ></span>
+                  <span class="meta-value">27 Students</span>
+                </div>
+              </div>
+
+              <!-- Courses title -->
+              <div class="courses-title">
+                <h5 class="secondary-heading">Photo Composition</h5>
+              </div>
+
+              <!-- Courses description -->
+              <div class="courses-description">
+                <p class="p-main-text">
+                  Develop your unique voice and storytelling techniques for
+                  fiction and non-fiction...
+                </p>
+              </div>
+
+              <!-- Through-line -->
+              <div class="through-line"></div>
+
+              <!-- courses footer -->
+              <div class="courses-footer">
+                <div class="product-meta">
+                  <div class="product-meta-stars">
+                    <div class="stars">
+                      <i class="fa-solid fa-star fa-sm colored"></i>
+                      <i class="fa-solid fa-star fa-sm colored"></i>
+                      <i class="fa-solid fa-star fa-sm solid"></i>
+                      <i class="fa-solid fa-star fa-sm solid"></i>
+                      <i class="fa-solid fa-star fa-sm solid"></i>
+                      <span class="total">(2.3)</span>
+                    </div>
+                    <span class="price">$19</span>
+                  </div>
+                  <a href="#" class="main-button center-text fill"
+                    >explore more</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Box -->
+            <div class="course-box main-hover-effect image-scale photography">
+              <!-- Header -->
+              <div class="box-header">
+                <div class="box-header-image box-scale radius-5">
+                  <img src="images/course-image-09.jpg" class="scale" alt="" />
+                </div>
+              </div>
+              <!-- Meta info -->
+              <div class="course-meta">
+                <div class="meta-item meta-date">
+                  <span class="meta-label"
+                    ><i class="fa-solid fa-clock-rotate-left"></i
+                  ></span>
+                  <span class="meta-value">09 Sep, 2023</span>
+                </div>
+
+                <div class="meta-item meta-curriculum">
+                  <span class="meta-label"
+                    ><i class="fa-regular fa-bookmark"></i
+                  ></span>
+                  <span class="meta-value">4 Modules</span>
+                </div>
+
+                <div class="meta-item meta-students">
+                  <span class="meta-label"
+                    ><i class="fa-solid fa-user"></i
+                  ></span>
+                  <span class="meta-value">38 Students</span>
+                </div>
+              </div>
+
+              <!-- Courses title -->
+              <div class="courses-title">
+                <h5 class="secondary-heading">Lighting Basics</h5>
+              </div>
+
+              <!-- Courses description -->
+              <div class="courses-description">
+                <p class="p-main-text">
+                  Science-based approach to healthy eating habits and
+                  sustainable lifestyle changes...
+                </p>
+              </div>
+
+              <!-- Through-line -->
+              <div class="through-line"></div>
+
+              <!-- courses footer -->
+              <div class="courses-footer">
+                <div class="product-meta">
+                  <div class="product-meta-stars">
+                    <div class="stars">
+                      <i class="fa-solid fa-star fa-sm colored"></i>
+                      <i class="fa-solid fa-star fa-sm colored"></i>
+                      <i class="fa-solid fa-star fa-sm colored"></i>
+                      <i class="fa-solid fa-star fa-sm colored"></i>
+                      <i class="fa-solid fa-star fa-sm colored"></i>
+                      <span class="total">(5)</span>
+                    </div>
+                    <span class="price">$45</span>
+                  </div>
+                  <a href="#" class="main-button center-text fill"
+                    >explore more</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Courses Boxes End -->
+        </div>
+      </div>
+    </section>
+    <!-- Progress section start -->
+    <section class="progress main-background main-padding">
+      <div class="container">
+        <div class="progress-container">
+          <div class="progress-images">
+            <div class="img-box top image-scale">
+              <div class="box-scale radius-10">
+                <img
+                  src="images/service-filler-img-1.jpg"
+                  class="scale"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="img-box center image-scale">
+              <div class="box-scale radius-10">
+                <img
+                  src="images/service-filler-img-2.jpg"
+                  class="scale"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="img-box bottom image-scale">
+              <div class="box-scale radius-10">
+                <img
+                  src="images/service-filler-img-3.jpg"
+                  class="scale"
+                  alt=""
+                />
+              </div>
+            </div>
+            <img src="images/asset-svg-55.svg" class="effective" alt="" />
+          </div>
+          <!-- Progress content -->
+          <div class="progress-content">
+            <div class="intro second">
+              <div class="main-title">
+                <span class="top-line"></span>
+                <h1 class="small">
+                  advantages of
+                  <span class="colored-text">our</span>
+                  <span class="colored-text">program</span>
+                </h1>
+              </div>
+
+              <p class="p-main-text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius
+                velit minima delectus cupiditate consectetur ad dolorum
+                architecto libero iste omnis beatae atque, quasi molestiae
+                commodi!
+              </p>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-bar-container">
+              <div class="progress-bar">
+                <div class="progress-head">
+                  <span class="prog-title">education :</span>
+                  <span class="prog-percentage">80%</span>
+                </div>
+                <div class="progress-measure radius-15">
+                  <span class="percentage" style="width: 80%"></span>
+                </div>
+              </div>
+
+              <div class="progress-bar">
+                <div class="progress-head">
+                  <span class="prog-title">education :</span>
+                  <span class="prog-percentage">60%</span>
+                </div>
+                <div class="progress-measure radius-15">
+                  <span class="percentage" style="width: 60%"></span>
+                </div>
+              </div>
+
+              <div class="progress-bar">
+                <div class="progress-head">
+                  <span class="prog-title">education :</span>
+                  <span class="prog-percentage">65%</span>
+                </div>
+                <div class="progress-measure radius-15">
+                  <span class="percentage" style="width: 65%"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Main Button -->
+            <a href="#" class="main-button">explore more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Progress section end -->
+
+    <!-- pricing section start -->
+    <section class="courses-pricing-section main-background main-padding">
+      <div class="container">
+        <div class="courses-pricing">
+          <!-- Main intro start -->
+          <div class="intro center second">
+            <div class="main-title center">
+              <span class="top-line"></span>
+              <h1 class="small">
+                Explore our premium
+                <span class="colored-text">courses</span>
+              </h1>
+            </div>
+
+            <p class="p-main-text center">
+              Transform your skills with our expert-led courses. Whether you're
+              a beginner or looking to advance your expertise, we have the
+              perfect learning path for your professional development.
+            </p>
+          </div>
+          <!-- Main intro end -->
+          <!-- plans Box Start -->
+          <div class="plans">
+            <div class="container">
+              <div class="plans-container">
+                <div class="plan silver">
+                  <div class="plan-holder">
+                    <!-- Top -->
+                    <div class="plan-box face radius-10 main-hover-effect">
+                      <div class="plan-box-header">
+                        <i class="fa-regular fa-star"></i>
+                        <span class="plan-title">Silver</span>
+                      </div>
+
+                      <div class="through-line"></div>
+
+                      <div class="plan-box-price">
+                        <span class="plan-price">$ 299</span>
+                        <span class="plan-price-text">Incl. All Taxes</span>
+                      </div>
+
+                      <div class="through-line"></div>
+
+                      <div class="plan-box-contnet">
+                        <ul class="plan-features">
+                          <li class="feature">
+                            <span class="feature-icon"
+                              ><i class="fa-solid fa-check"></i
+                            ></span>
+                            <span class="feature-text"
+                              >3-month course access</span
+                            >
+                          </li>
+                          <li class="feature">
+                            <span class="feature-icon"
+                              ><i class="fa-solid fa-check"></i
+                            ></span>
+                            <span class="feature-text"
+                              >basic video library</span
+                            >
+                          </li>
+                          <li class="feature">
+                            <span class="feature-icon"
+                              ><i class="fa-solid fa-check"></i
+                            ></span>
+                            <span class="feature-text"
+                              >completion certificate</span
+                            >
+                          </li>
+                          <li class="feature">
+                            <span class="feature-icon"
+                              ><i class="fa-solid fa-check"></i
+                            ></span>
+                            <span class="feature-text"
+                              >community forum access</span
+                            >
+                          </li>
+                          <li class="feature">
+                            <span class="feature-icon"
+                              ><i class="fa-solid fa-check"></i
+                            ></span>
+                            <span class="feature-text"
+                              >foundational modules</span
+                            >
+                          </li>
+
+                          <a href="#" class="main-button fill"
+                            >start learning</a
+                          >
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- Down -->
+                    <div class="plan-box back radius-10 main-hover-effect">
+                      <div class="plan-box-header">
+                        <i class="fa-regular fa-star"></i>
+                        <span class="plan-title">Silver</span>
+                      </div>
+
+                      <div class="through-line"></div>
+
+                      <div class="plan-box-price">
+                        <span class="plan-price">$ 750</span>
+                        <span class="plan-price-text">Incl. All Taxes</span>
+                      </div>
+
+                      <div class="through-line"></div>
+
+                      <div class="plan-box-contnet">
+                        <ul class="plan-features">
+                          <li class="feature">
+                            <span class="feature-icon"
+                              ><i class="fa-solid fa-check"></i
+                            ></span>
+                            <span class="feature-text"
+                              >6-month course access</span
+                            >
+                          </li>
+                          <li class="feature">
+                            <span class="feature-icon"
+                              ><i class="fa-solid fa-check"></i
+                            ></span>
+                            <span class="feature-text"
+                              >extended video library</span
+                            >
+                          </li>
+                          <li class="feature">
+                            <span class="feature-icon"
+                              ><i class="fa-solid fa-check"></i
+                            ></span>
+                            <span class="feature-text"
+                              >verified completion certificate</span
+                            >
+                          </li>
+                          <li class="feature">
+                            <span class="feature-icon"
+                              ><i class="fa-solid fa-check"></i
+                            ></span>
+                            <span class="feature-text"
+                              >priority community support</span
+                            >
+                          </li>
+                          <li class="feature">
+                            <span class="feature-icon"
+                              ><i class="fa-solid fa-check"></i
+                            ></span>
+                            <span class="feature-text"
+                              >intermediate skill modules</span
+                            >
+                          </li>
+
+                          <a href="#" class="main-button fill"
+                            >start learning</a
+                          >
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="plan gold">
+                  <!-- Plan Control -->
+                  <div class="plan-control-container">
+                    <div class="control-box radius-5">
+                      <div class="controls">
+                        <span class="background radius-5"></span>
+                        <span class="monthly button active">monthly</span>
+                        <span class="annual button">annual</span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Plan Control -->
+
+                  <div class="plan-holder">
+                    <!-- Top -->
+                    <div
+                      class="plan-box face radius-10 main-hover-effect active"
+                    >
+                      <div class="plan-box-header">
+                        <i class="fa-regular fa-star"></i>
+                        <span class="plan-title">Gold</span>
+                      </div>
+
+                      <div class="through-line"></div>
+
+                      <div class="plan-box-price">
+                        <span class="plan-price">$ 599</span>
+                        <span class="plan-price-text">Incl. All Taxes</span>
+                      </div>
+
+                      <div class="through-line"></div>
+
+                      <div class="plan-box-contnet">
+                        <ul class="plan-features">
+                          <li class="feature">
+                            <span class="feature-icon"
+                              ><i class="fa-solid fa-check"></i
+                            ></span>
+                            <span class="feature-text"
+                              >12-month premium access</span
+                            >
+                          </li>
+                          <li class="feature">
+                            <span class="feature-icon"
+                              ><i class="fa-solid fa-check"></i
+                            ></span>
+                            <span class="feature-text"
+                              >complete resource library</span
+                            >
+                          </li>
+                          <li class="feature">
+                            <span class="feature-icon"
+                              ><i class="fa-solid fa-check"></i
+                            ></span>
+                            <span class="feature-text"
+                              >professional certification</span
+                            >
+                          </li>
+                          <li class="feature">
+                            <span class="feature-icon"
+                              ><i class="fa-solid fa-check"></i
+                            ></span>
+                            <span class="feature-text"
+                              >monthly live workshops</span
+                            >
+                          </li>
+                          <li class="feature">
+                            <span class="feature-icon"
+                              ><i class="fa-solid fa-check"></i
+                            ></span>
+                            <span class="feature-text"
+                              >advanced project tutorials</span
+                            >
+                          </li>
+
+                          <a href="#" class="main-button fill"
+                            >unlock premium</a
+                          >
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- Down -->
+                    <div
+                      class="plan-box back radius-10 main-hover-effect active"
+                    >
+                      <div class="plan-box-header">
+                        <i class="fa-regular fa-star"></i>
+                        <span class="plan-title">Gold</span>
+                      </div>
+
+                      <div class="through-line"></div>
+
+                      <div class="plan-box-price">
+                        <span class="plan-price">$ 1000</span>
+                        <span class="plan-price-text">Incl. All Taxes</span>
+                      </div>
+
+                      <div class="through-line"></div>
+
+                      <div class="plan-box-contnet">
+                        <ul class="plan-features">
+                          <li class="feature">
+                            <span class="feature-icon"
+                              ><i class="fa-solid fa-check"></i
+                            ></span>
+                            <span class="feature-text"
+                              >18-month extended access</span
+                            >
+                          </li>
+                          <li class="feature">
+                            <span class="feature-icon"
+                              ><i class="fa-solid fa-check"></i
+                            ></span>
+                            <span class="feature-text"
+                              >premium resource collection</span
+                            >
+                          </li>
+                          <li class="feature">
+                            <span class="feature-icon"
+                              ><i class="fa-solid fa-check"></i
+                            ></span>
+                            <span class="feature-text"
+                              >industry-standard certification</span
+                            >
+                          </li>
+                          <li class="feature">
+                            <span class="feature-icon"
+                              ><i class="fa-solid fa-check"></i
+                            ></span>
+                            <span class="feature-text"
+                              >bi-weekly expert sessions</span
+                            >
+                          </li>
+                          <li class="feature">
+                            <span class="feature-icon"
+                              ><i class="fa-solid fa-check"></i
+                            ></span>
+                            <span class="feature-text"
+                              >mastery-level coursework</span
+                            >
+                          </li>
+
+                          <a href="#" class="main-button fill"
+                            >unlock premium</a
+                          >
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="plan Platinum">
+                  <div class="plan-holder">
+                    <!-- Top -->
+                    <div class="plan-box face radius-10 main-hover-effect">
+                      <div class="plan-box-header">
+                        <i class="fa-regular fa-star"></i>
+                        <span class="plan-title">Platinum</span>
+                      </div>
+
+                      <div class="through-line"></div>
+
+                      <div class="plan-box-price">
+                        <span class="plan-price">$ 999</span>
+                        <span class="plan-price-text">Incl. All Taxes</span>
+                      </div>
+
+                      <div class="through-line"></div>
+
+                      <div class="plan-box-contnet">
+                        <ul class="plan-features">
+                          <li class="feature">
+                            <span class="feature-icon"
+                              ><i class="fa-solid fa-check"></i
+                            ></span>
+                            <span class="feature-text"
+                              >unlimited lifetime access</span
+                            >
+                          </li>
+                          <li class="feature">
+                            <span class="feature-icon"
+                              ><i class="fa-solid fa-check"></i
+                            ></span>
+                            <span class="feature-text"
+                              >exclusive VIP resources</span
+                            >
+                          </li>
+                          <li class="feature">
+                            <span class="feature-icon"
+                              ><i class="fa-solid fa-check"></i
+                            ></span>
+                            <span class="feature-text"
+                              >master-level certification</span
+                            >
+                          </li>
+                          <li class="feature">
+                            <span class="feature-icon"
+                              ><i class="fa-solid fa-check"></i
+                            ></span>
+                            <span class="feature-text"
+                              >personal mentoring program</span
+                            >
+                          </li>
+                          <li class="feature">
+                            <span class="feature-icon"
+                              ><i class="fa-solid fa-check"></i
+                            ></span>
+                            <span class="feature-text"
+                              >personalized career roadmap</span
+                            >
+                          </li>
+
+                          <a href="#" class="main-button fill">elite access</a>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- Down -->
+                    <div class="plan-box back radius-10 main-hover-effect">
+                      <div class="plan-box-header">
+                        <i class="fa-regular fa-star"></i>
+                        <span class="plan-title">Platinum</span>
+                      </div>
+
+                      <div class="through-line"></div>
+
+                      <div class="plan-box-price">
+                        <span class="plan-price">$ 1550</span>
+                        <span class="plan-price-text">Incl. All Taxes</span>
+                      </div>
+
+                      <div class="through-line"></div>
+
+                      <div class="plan-box-contnet">
+                        <ul class="plan-features">
+                          <li class="feature">
+                            <span class="feature-icon"
+                              ><i class="fa-solid fa-check"></i
+                            ></span>
+                            <span class="feature-text"
+                              >lifetime premium membership</span
+                            >
+                          </li>
+                          <li class="feature">
+                            <span class="feature-icon"
+                              ><i class="fa-solid fa-check"></i
+                            ></span>
+                            <span class="feature-text"
+                              >comprehensive learning suite</span
+                            >
+                          </li>
+                          <li class="feature">
+                            <span class="feature-icon"
+                              ><i class="fa-solid fa-check"></i
+                            ></span>
+                            <span class="feature-text"
+                              >executive-level certification</span
+                            >
+                          </li>
+                          <li class="feature">
+                            <span class="feature-icon"
+                              ><i class="fa-solid fa-check"></i
+                            ></span>
+                            <span class="feature-text"
+                              >dedicated success manager</span
+                            >
+                          </li>
+                          <li class="feature">
+                            <span class="feature-icon"
+                              ><i class="fa-solid fa-check"></i
+                            ></span>
+                            <span class="feature-text"
+                              >custom enterprise solutions</span
+                            >
+                          </li>
+
+                          <a href="#" class="main-button fill">elite access</a>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- CCCCC -->
+              <div class="subscription-details mg-t-element">
+                <p class="p-main-text center">
+                  Here’s the rewritten text with the opposite meaning while
+                  keeping a similar word count: *Silver, Gold, Platinum, and
+                  Course Plan **do not** have 0% transaction fees with any
+                  payment gateway (i.e., online: pay Monthly or Yearly via
+                  Gateway). Plans **will not** renew automatically unless
+                  confirmed. Recurring charges **are not** subject to changes.
+                  Plans **cannot** be canceled at any time. Standard Processing
+                  fees **do not** apply. Have questions? Contact
+                  support@example.com.* (Note: The meaning has been inverted
+                  while maintaining a similar structure and word count.)
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- plans Box End -->
+        </div>
+      </div>
+    </section>
+    <!-- pricing section end -->
+
+    <!-- Assistance section start -->
+    <section class="assistance main-background main-padding">
+      <div class="container">
+        <div class="assistance-box">
+          <!-- Intro start -->
+          <div class="intro-container">
+            <div class="intro second">
+              <div class="main-title">
+                <span class="top-line"></span>
+                <h1 class="small">
+                  advantages of
+                  <span class="colored-text">complete</span>
+                  <span class="colored-text">assistance</span>
+                </h1>
+              </div>
+            </div>
+
+            <!-- Main button -->
+            <a href="#" class="main-button">download syllabus</a>
+          </div>
+          <!-- Intro End -->
+
+          <!-- Accordion start -->
+          <div class="accordion-conatiner">
+            <!-- Left section -->
+            <div class="accordion-section">
+              <!-- Item start -->
+              <div class="accordion-item main-hover-effect active">
+                <div class="accordion-header">
+                  <div class="title">
+                    What Types Of Online Courses Are Available?
+                  </div>
+                  <div class="icon">
+                    <i class="fa-solid fa-chevron-up"></i>
+                  </div>
+                </div>
+                <div class="accordion-content active">
+                  <p class="p-main-text">
+                    Accumsan sit amet nulla facilisi morbi tempus iaculis urna.
+                    Vivamus arcu felis bibendum ut tristique et egestas. Cras
+                    tincidunt lobortis feugiat vivamus at augue. Nibh nisl
+                    condimentum id venenatis a condimentum vitae sapien.
+                  </p>
+                </div>
+              </div>
+              <!-- Item start -->
+              <!-- Item start -->
+              <div class="accordion-item main-hover-effect">
+                <div class="accordion-header">
+                  <div class="title">Are Online Courses Accredited?</div>
+                  <div class="icon">
+                    <i class="fa-solid fa-chevron-up"></i>
+                  </div>
+                </div>
+                <div class="accordion-content">
+                  <p class="p-main-text">
+                    Accumsan sit amet nulla facilisi morbi tempus iaculis urna.
+                    Vivamus arcu felis bibendum ut tristique et egestas. Cras
+                    tincidunt lobortis feugiat vivamus at augue. Nibh nisl
+                    condimentum id venenatis a condimentum vitae sapien.
+                  </p>
+                </div>
+              </div>
+              <!-- Item start -->
+              <!-- Item start -->
+              <div class="accordion-item main-hover-effect">
+                <div class="accordion-header">
+                  <div class="title">How Do I Enroll In An Online Course?</div>
+                  <div class="icon">
+                    <i class="fa-solid fa-chevron-up"></i>
+                  </div>
+                </div>
+                <div class="accordion-content">
+                  <p class="p-main-text">
+                    Accumsan sit amet nulla facilisi morbi tempus iaculis urna.
+                    Vivamus arcu felis bibendum ut tristique et egestas. Cras
+                    tincidunt lobortis feugiat vivamus at augue. Nibh nisl
+                    condimentum id venenatis a condimentum vitae sapien.
+                  </p>
+                </div>
+              </div>
+              <!-- Item start -->
+              <!-- Item start -->
+              <div class="accordion-item main-hover-effect">
+                <div class="accordion-header">
+                  <div class="title">How Much Do Online Courses Cost?</div>
+                  <div class="icon">
+                    <i class="fa-solid fa-chevron-up"></i>
+                  </div>
+                </div>
+                <div class="accordion-content">
+                  <p class="p-main-text">
+                    Accumsan sit amet nulla facilisi morbi tempus iaculis urna.
+                    Vivamus arcu felis bibendum ut tristique et egestas. Cras
+                    tincidunt lobortis feugiat vivamus at augue. Nibh nisl
+                    condimentum id venenatis a condimentum vitae sapien.
+                  </p>
+                </div>
+              </div>
+              <!-- Item start -->
+            </div>
+
+            <!-- Right section -->
+            <div class="accordion-section">
+              <!-- Item start -->
+              <div class="accordion-item main-hover-effect active">
+                <div class="accordion-header">
+                  <div class="title">
+                    What Types Of Online Courses Are Available?
+                  </div>
+                  <div class="icon">
+                    <i class="fa-solid fa-chevron-up"></i>
+                  </div>
+                </div>
+                <div class="accordion-content active">
+                  <p class="p-main-text">
+                    Accumsan sit amet nulla facilisi morbi tempus iaculis urna.
+                    Vivamus arcu felis bibendum ut tristique et egestas. Cras
+                    tincidunt lobortis feugiat vivamus at augue. Nibh nisl
+                    condimentum id venenatis a condimentum vitae sapien.
+                  </p>
+                </div>
+              </div>
+              <!-- Item start -->
+              <!-- Item start -->
+              <div class="accordion-item main-hover-effect">
+                <div class="accordion-header">
+                  <div class="title">Are Online Courses Accredited?</div>
+                  <div class="icon">
+                    <i class="fa-solid fa-chevron-up"></i>
+                  </div>
+                </div>
+                <div class="accordion-content">
+                  <p class="p-main-text">
+                    Accumsan sit amet nulla facilisi morbi tempus iaculis urna.
+                    Vivamus arcu felis bibendum ut tristique et egestas. Cras
+                    tincidunt lobortis feugiat vivamus at augue. Nibh nisl
+                    condimentum id venenatis a condimentum vitae sapien.
+                  </p>
+                </div>
+              </div>
+              <!-- Item start -->
+              <!-- Item start -->
+              <div class="accordion-item main-hover-effect">
+                <div class="accordion-header">
+                  <div class="title">How Do I Enroll In An Online Course?</div>
+                  <div class="icon">
+                    <i class="fa-solid fa-chevron-up"></i>
+                  </div>
+                </div>
+                <div class="accordion-content">
+                  <p class="p-main-text">
+                    Accumsan sit amet nulla facilisi morbi tempus iaculis urna.
+                    Vivamus arcu felis bibendum ut tristique et egestas. Cras
+                    tincidunt lobortis feugiat vivamus at augue. Nibh nisl
+                    condimentum id venenatis a condimentum vitae sapien.
+                  </p>
+                </div>
+              </div>
+              <!-- Item start -->
+              <!-- Item start -->
+              <div class="accordion-item main-hover-effect">
+                <div class="accordion-header">
+                  <div class="title">How Much Do Online Courses Cost?</div>
+                  <div class="icon">
+                    <i class="fa-solid fa-chevron-up"></i>
+                  </div>
+                </div>
+                <div class="accordion-content">
+                  <p class="p-main-text">
+                    Accumsan sit amet nulla facilisi morbi tempus iaculis urna.
+                    Vivamus arcu felis bibendum ut tristique et egestas. Cras
+                    tincidunt lobortis feugiat vivamus at augue. Nibh nisl
+                    condimentum id venenatis a condimentum vitae sapien.
+                  </p>
+                </div>
+              </div>
+              <!-- Item start -->
+            </div>
+          </div>
+          <!-- Accordion end -->
+        </div>
+      </div>
+    </section>
+    <!-- Assistance section end -->
+
+    <!-- Team Section Start -->
+    <section class="team main-background main-padding">
+      <div class="container">
+        <div class="team-container">
+          <!-- Intro Start -->
+          <div class="intro center second">
+            <div class="main-title center">
+              <span class="top-line"></span>
+              <h1 class="small">
+                our strong
+                <span class="colored-text">team</span>
+              </h1>
+            </div>
+
+            <p class="p-main-text center">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt
+              sed obcaecati nisi laudantium facere. Numquam, aliquid asperiores?
+            </p>
+          </div>
+          <!-- Intro End -->
+
+          <!-- Team Boxes Start -->
+          <div class="team-boxes">
+            <div class="the-line-box">
+              <div class="box main-hover-effect radius-10">
+                <div class="image image-scale">
+                  <div class="image-container box-scale radius-5">
+                    <img src="images/Ai-Mentor-1.jpg" class="scale" alt="" />
+                  </div>
+                </div>
+                <div class="title">
+                  <span class="name">Ahmed Hassan</span>
+                  <span class="desc p-main-text center">Physics Tutor</span>
+                </div>
+              </div>
+
+              <div class="box main-hover-effect radius-10">
+                <div class="image image-scale">
+                  <div class="image-container box-scale radius-5">
+                    <img src="images/Ai-Mentor-2.jpg" class="scale" alt="" />
+                  </div>
+                </div>
+                <div class="title">
+                  <span class="name">Sarah Mitchell</span>
+                  <span class="desc p-main-text center">AI Tutor</span>
+                </div>
+              </div>
+
+              <div class="box main-hover-effect radius-10">
+                <div class="image image-scale">
+                  <div class="image-container box-scale radius-5">
+                    <img src="images/Ai-Mentor-3.jpg" class="scale" alt="" />
+                  </div>
+                </div>
+                <div class="title">
+                  <span class="name">Omar Rodriguez</span>
+                  <span class="desc p-main-text center">Programming Tutor</span>
+                </div>
+              </div>
+
+              <div class="box main-hover-effect radius-10">
+                <div class="image image-scale">
+                  <div class="image-container box-scale radius-5">
+                    <img src="images/Ai-Mentor-4.jpg" class="scale" alt="" />
+                  </div>
+                </div>
+                <div class="title">
+                  <span class="name">Marley Allison</span>
+                  <span class="desc p-main-text center">Hardware Tutor</span>
+                </div>
+              </div>
+
+              <div class="box main-hover-effect radius-10">
+                <div class="image image-scale">
+                  <div class="image-container box-scale radius-5">
+                    <img src="images/Ai-Mentor-2.jpg" class="scale" alt="" />
+                  </div>
+                </div>
+                <div class="title">
+                  <span class="name">Marley Allison</span>
+                  <span class="desc p-main-text center">Hardware Tutor</span>
+                </div>
+              </div>
+
+              <div class="box main-hover-effect radius-10">
+                <div class="image image-scale">
+                  <div class="image-container box-scale radius-5">
+                    <img src="images/Ai-Mentor-3.jpg" class="scale" alt="" />
+                  </div>
+                </div>
+                <div class="title">
+                  <span class="name">Marley Allison</span>
+                  <span class="desc p-main-text center">Hardware Tutor</span>
+                </div>
+              </div>
+
+              <div class="box main-hover-effect radius-10">
+                <div class="image image-scale">
+                  <div class="image-container box-scale radius-5">
+                    <img src="images/Ai-Mentor-1.jpg" class="scale" alt="" />
+                  </div>
+                </div>
+                <div class="title">
+                  <span class="name">Marley Allison</span>
+                  <span class="desc p-main-text center">Hardware Tutor</span>
+                </div>
+              </div>
+
+              <div class="box main-hover-effect radius-10">
+                <div class="image image-scale">
+                  <div class="image-container box-scale radius-5">
+                    <img src="images/Ai-Mentor-2.jpg" class="scale" alt="" />
+                  </div>
+                </div>
+                <div class="title">
+                  <span class="name">Marley Allison</span>
+                  <span class="desc p-main-text center">Hardware Tutor</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Team Boxes End -->
+
+          <!-- Control Box Start -->
+          <div class="control-container">
+            <div class="controls">
+              <span class="prev radius-5"
+                ><i class="fa-solid fa-chevron-left"></i
+              ></span>
+              <span class="next radius-5"
+                ><i class="fa-solid fa-chevron-right"></i
+              ></span>
+            </div>
+          </div>
+          <!-- Control Box End -->
+        </div>
+      </div>
+    </section>
+    <!-- Team Section End -->
+
+    <!-- Form Section Start -->
+    <section class="form main-background main-padding">
+      <div class="container">
+        <div class="form-container">
+          <div class="images-section">
+            <div class="desc-section">
+              <div class="main-title">
+                <span class="top-line"></span>
+                <h1 class="small">
+                  advantages of
+                  <span class="colored-text">complete</span>
+                  <span class="colored-text">assistance</span>
+                </h1>
+              </div>
+
+              <p class="p-main-text">
+                Transform your skills with our expert-led courses. Whether
+                you're a beginner or looking to advance your expertise, we have
+                the perfect learning path for your professional development.
+              </p>
+            </div>
+
+            <div class="images">
+              <div class="image-box">
+                <img src="images/Logo/image-1.png" alt="" />
+              </div>
+              <div class="image-box">
+                <img src="images/Logo/image-2.png" alt="" />
+              </div>
+              <div class="image-box">
+                <img src="images/Logo/image-3.png" alt="" />
+              </div>
+              <div class="image-box">
+                <img src="images/Logo/image-4.png" alt="" />
+              </div>
+              <div class="image-box">
+                <img src="images/Logo/image-5.png" alt="" />
+              </div>
+              <div class="image-box">
+                <img src="images/Logo/image-6.png" alt="" />
+              </div>
+              <div class="image-box">
+                <img src="images/Logo/image-7.png" alt="" />
+              </div>
+              <div class="image-box">
+                <img src="images/Logo/image-8.png" alt="" />
+              </div>
+              <div class="image-box">
+                <img src="images/Logo/image-9.png" alt="" />
+              </div>
+              <div class="image-box">
+                <img src="images/Logo/image-10.png" alt="" />
+              </div>
+              <div class="image-box">
+                <img src="images/Logo/image-11.png" alt="" />
+              </div>
+              <div class="image-box">
+                <img src="images/Logo/image-12.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <!-- Form -->
+          <form class="main-hover-effect active radius-10">
+            <div class="inputs">
+              <input class="radius-5" type="text" placeholder="fisrt name" />
+              <input class="radius-5" type="text" placeholder="last name" />
+              <input class="radius-5" type="email" placeholder="your email" />
+
+              <!-- Drop-down -->
+              <div class="form-drop-down">
+                <span class="head radius-5"
+                  ><p>Where would you like to learn?</p>
+                  <i class="fa-solid fa-angle-down"></i
+                ></span>
+              </div>
+
+              <!-- Selecte Course -->
+              <div class="courses">
+                <span class="title">What topics are you Interested In?</span>
+
+                <div class="courses-boxes">
+                  <div class="box">
+                    <span class="check radius-5"></span>
+                    <span class="name-course">coding</span>
+                  </div>
+
+                  <div class="box">
+                    <span class="check radius-5"></span>
+                    <span class="name-course">marketing </span>
+                  </div>
+
+                  <div class="box">
+                    <span class="check radius-5"></span>
+                    <span class="name-course">design</span>
+                  </div>
+
+                  <div class="box">
+                    <span class="check radius-5"></span>
+                    <span class="name-course">business</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Main Button -->
+
+              <a href="#" class="main-button fill">save & subscribe</a>
+
+              <!-- Footer -->
+              <p class="p-main-text">
+                By sharing your email, you agree to our Privacy Policy and Terms
+                and Service.
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- Form Section End -->
+
+    <!-- Footer Start -->
+    <footer class="footer-section main-padding">
+      <div class="container">
+        <div class="footer-container">
+          <div class="footer-up main-hover-effect active radius-15">
+            <div class="main-title">
+              <span class="top-line"></span>
+              <h1 class="small">
+                advantages of
+                <span class="colored-text">complete</span>
+                <span class="colored-text">assistance</span>
+              </h1>
+            </div>
+            <!--Boxes  -->
+            <div class="footer-up-boxes">
+              <div class="box">
+                <div class="box-icon">
+                  <i class="fa-solid fa-people-roof"></i>
+                </div>
+                <div class="box-title">community</div>
+              </div>
+
+              <div class="box">
+                <div class="box-icon">
+                  <i class="fa-solid fa-pen"></i>
+                </div>
+                <div class="box-title">referrals</div>
+              </div>
+
+              <div class="box">
+                <div class="box-icon"><i class="fa-solid fa-book"></i></div>
+                <div class="box-title">Assignments</div>
+              </div>
+
+              <div class="box">
+                <div class="box-icon">
+                  <i class="fa-solid fa-certificate"></i>
+                </div>
+                <div class="box-title">Certificates</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="through-line"></div>
+    <div class="footer-end">
+      <div class="container">
+        <span class="p-main-text">© 25-06-2025. All Rights Reserved.</span>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Javascript Files -->
+    <script src="javascript/nav/nav.js"></script>
+    <script src="javascript/tabs/tab.js"></script>
+    <script src="javascript/plans/palns.js"></script>
+    <script src="javascript/accordion/accordion.js"></script>
+    <script src="javascript/team/team.js"></script>
+    <script src="javascript/form/check.js"></script>
+  </body>
+</html>

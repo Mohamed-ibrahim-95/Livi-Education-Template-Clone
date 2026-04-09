@@ -1,0 +1,199 @@
+/* Import abstracts and utilities */
+@use "../../abstracts/" as *;
+@use "sass:meta"; // Metadata utilities
+
+.support {
+  position: absolute;
+
+  &.section-blur {
+    @include media-breakpoints("up", "xxl") {
+      &::before {
+        content: "";
+        position: fixed;
+        // left: 0;
+        // top: 0;
+        // right: 0;
+        // bottom: 0;
+        @include same-values((top, right, bottom, left), 0);
+        background-color: #000000c4;
+        backdrop-filter: blur(3px);
+        z-index: 1;
+      }
+    }
+  }
+
+  .support-promo-section {
+    background-color: var(--body-bg-color);
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    max-width: units(600, "px");
+    padding: units(20, "rem") units(30, "rem");
+    z-index: 2;
+    @include prefixer(transition, (transform 0.3s ease-in-out));
+    @include prefixer(transform, translateX(100%));
+    @include flex(
+      $display: flex,
+      $direction: column,
+      $wrap: wrap,
+      $justify: start,
+      $gap: units(35, "px")
+    );
+
+    &.open {
+      @include prefixer(transform, (translatex(0)));
+      display: none;
+      @include media-breakpoints("up", "xxl") {
+        display: flex;
+      }
+    }
+
+    // Close Button Container
+    .close-button-container {
+      @include flex($display: flex, $justify: flex-end);
+      margin-bottom: units(30, "px");
+
+      .close-button {
+        position: relative;
+        cursor: pointer;
+        @include same-values((width, height), units(45, "px"));
+        background-color: var(--primary-color);
+        border-radius: units(50, "%");
+        @include flex($display: flex, $justify: center, $align: center);
+
+        // x mark icon styling for close button
+        %same-properties {
+          display: block;
+          content: "";
+          background-color: var(--body-bg-color);
+        }
+
+        .x-mark {
+          position: relative;
+          @include prefixer(transform, rotate(45deg));
+          @include prefixer(transition, transform 0.3s ease-in-out);
+
+          &::before {
+            @extend %same-properties;
+            width: units(20, "px");
+            height: units(2, "px");
+          }
+
+          &::after {
+            @extend %same-properties;
+            width: units(2, "px");
+            height: units(20, "px");
+            position: absolute;
+            @include same-values((left, top), units(50, "%"));
+            @include prefixer(transform, translateY(units(-50, "%")));
+            @include prefixer(transition, (opacity 0.3s ease-in-out));
+          }
+        }
+
+        &:hover {
+          .x-mark {
+            @include prefixer(transform, rotate(0));
+
+            &::after {
+              opacity: 0;
+            }
+          }
+        }
+      }
+    }
+
+    // Header Support
+    .header-support {
+      @include flex($display: flex, $justify: space-between, $align: center);
+      .through-line {
+        width: 150px;
+      }
+    }
+
+    // Contact info container
+    .contact-info-container {
+      padding: 0 units(30, "rem");
+      background-color: var(--tertiary-color);
+      border: 1px solid var(--border-color);
+      border-radius: units(10, "px");
+
+      @include flex(
+        $display: flex,
+        $direction: column,
+        $wrap: wrap,
+        $align: flex-start
+      );
+
+      .contact {
+        padding: units(30, "rem") 0;
+        @include flex(
+          $display: flex,
+          $align: flex-start,
+          $gap: units(20, "px")
+        );
+
+        &.phone-contact {
+          .text-phone {
+            p {
+              span {
+                @include font(
+                  $color: var(--head-alt-color),
+                  $weight: var(--font-weight-ext)
+                );
+                @include prefixer(transition, color 0.3s ease-in-out);
+
+                &:hover {
+                  cursor: pointer;
+                  @include font($color: var(--primary-color));
+                }
+              }
+            }
+          }
+        }
+
+        &.whatsapp-contact {
+          .text-whatsapp {
+            @include flex($display: flex, $gap: units(50, "px"));
+
+            .text-whatsapp-inner {
+              @include flex(
+                $display: flex,
+                $direction: column,
+                $wrap: wrap,
+                $gap: units(15, "px")
+              );
+
+              h5 {
+                @include font(
+                  $size: units(20, "rem"),
+                  $weight: var(--font-weight-alt)
+                );
+              }
+            }
+
+            .qr-image {
+              @include flex(
+                $display: flex,
+                $justify: center,
+                $align: flex-start
+              );
+              img {
+                width: units(73, "%");
+              }
+            }
+          }
+        }
+      }
+
+      // .through-line {
+      //   display: block;
+      //   height: 1px;
+      //   width: 100%;
+      //   background-color: var(--border-color);
+      // }
+    }
+
+    // Promo Subscribe Container
+  }
+}

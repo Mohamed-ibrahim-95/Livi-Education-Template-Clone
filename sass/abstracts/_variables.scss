@@ -1,0 +1,241 @@
+// Importing core SASS modules for extended functionality and better organization
+@use "sass:meta"; // Metadata utilities
+@use "sass:math"; // Mathematical functions
+@use "sass:color"; // Color manipulation
+@use "sass:string"; // String operations
+@use "sass:list"; // List operations
+@use "sass:map"; // Map operations
+@use "sass:selector"; // Selector utilities
+
+$primary-color: #ee2c3c;
+$primary-color-rgb: 238, 44, 60;
+
+$secondary-color: #da202f;
+$secondary-color-rgb: 218, 32, 47;
+
+$tertiary-color: #fcf1f5;
+$tertiary-color-rgb: 252, 241, 245;
+
+$quaternary-color: #6a11b0;
+$quaternary-color-rgb: 106, 17, 176;
+
+$body-bg-color: #ffffff;
+$body-bg-color-rgb: 255, 255, 255;
+
+$body-txt-color: #666666;
+$body-txt-color-rgb: 102, 102, 102;
+
+$head-alt-color: #000000;
+$head-alt-color-rgb: 0, 0, 0;
+
+$nav-link-color: #000000;
+$nav-link-color-rgb: 0, 0, 0;
+
+$nav-link-hover-color: #ee2c3c;
+$nav-link-hover-color-rgb: 238, 44, 60;
+
+$border-color: #d7d7d7;
+$border-color-rgb: 215, 215, 215;
+
+$accent-txt-color: #ffffff;
+$accent-txt-color-rgb: 255, 255, 255;
+
+$stars-color: #fd952d;
+
+$serif-font: sans-serif;
+$manrope-font: "Manrope";
+$urbanist-font: "Urbanist";
+
+// Base Typography
+$font-Typo-Base: $manrope-font, $serif-font;
+$font-Weight-Base: 400;
+$font-Size_Base: 16px;
+$line-Height-Base: 1.7;
+
+// Alternative Typography
+$font-Typo-Alt: $urbanist-font, $serif-font;
+$font-weight-alt: 600;
+$font-size-alt: 60px;
+$line-height-alt: 1.15;
+
+// Headings
+$font-typo-h1: $urbanist-font, $serif-font;
+$font-weight-h1: 600;
+$font-size-h1: 60px;
+$line-height-h1: 1.15;
+
+$font-typo-h2: $urbanist-font, $serif-font;
+$font-weight-h2: 600;
+$font-size-h2: 52px;
+$line-height-h2: 1.15;
+
+$font-typo-h3: $urbanist-font, $serif-font;
+$font-weight-h3: 600;
+$font-size-h3: 40px;
+$line-height-h3: 1.15;
+
+$font-typo-h4: $urbanist-font, $serif-font;
+$font-weight-h4: 600;
+$font-size-h4: 30px;
+$line-height-h4: 1.15;
+
+$font-typo-h5: $urbanist-font, $serif-font;
+$font-weight-h5: 600;
+$font-size-h5: 24px;
+$line-height-h5: 1.15;
+
+$font-typo-h6: $urbanist-font, $serif-font;
+$font-weight-h6: 600;
+$font-size-h6: 20px;
+$line-height-h6: 1.15;
+
+$font-typo-ext: "Dancing Script", sans-serif;
+$font-weight-ext: 500;
+$font-size-ext: 14px;
+$line-height-ext: 1.1;
+
+$main-box-shadow: 0 0 8px 3px rgba($head-alt-color, 0.08);
+
+$root-size: 16;
+
+$radius-5: 5px;
+
+$radius-10: 10px;
+
+$radius-15: 15px;
+
+:root {
+  --primary-color: #{$primary-color};
+  --primary-color-rgb: #{$primary-color-rgb};
+
+  --secondary-color: #{$secondary-color};
+  --secondary-color-rgb: #{$secondary-color-rgb};
+
+  --tertiary-color: #{$tertiary-color};
+  --tertiary-color-rgb: #{$tertiary-color-rgb};
+
+  --quaternary-color: #{$quaternary-color};
+  --quaternary-color-rgb: #{$quaternary-color-rgb};
+
+  --body-bg-color: #{$body-bg-color};
+  --body-bg-color-rgb: #{$body-bg-color-rgb};
+
+  --body-txt-color: #{$body-txt-color};
+  --body-txt-color-rgb: #{$body-txt-color-rgb};
+
+  --head-alt-color: #{$head-alt-color};
+  --head-alt-color-rgb: #{$head-alt-color-rgb};
+
+  --nav-link-color: #{$nav-link-color};
+  --nav-link-color-rgb: #{$nav-link-color-rgb};
+
+  --nav-link-hover-color: #{$nav-link-hover-color};
+  --nav-link-hover-color-rgb: #{$nav-link-hover-color-rgb};
+
+  --border-color: #{$border-color};
+  --border-color-rgb: #{$border-color-rgb};
+
+  --accent-txt-color: #{$accent-txt-color};
+  --accent-txt-color-rgb: #{$accent-txt-color-rgb};
+
+  --stars-color: #{$stars-color};
+
+  --font-Typo-Base: #{meta.inspect($font-Typo-Base)};
+  --font-Weight-Base: #{$font-Weight-Base};
+  --font-Size_Base: #{$font-Size_Base};
+  --line-Height-Base: #{$line-Height-Base};
+
+  --font-Typo-Alt: #{meta.inspect($font-Typo-Alt)};
+  --font-weight-alt: #{$font-weight-alt};
+  --font-size-alt: #{$font-size-alt};
+  --line-height-alt: #{$line-height-alt};
+
+  --font-typo-h1: #{meta.inspect($font-typo-h1)};
+  --font-weight-h1: #{$font-weight-h1};
+  --font-size-h1: #{$font-size-h1};
+  --line-height-h1: #{$line-height-h1};
+
+  --font-typo-h2: #{meta.inspect($font-typo-h2)};
+  --font-weight-h2: #{$font-weight-h2};
+  --font-size-h2: #{$font-size-h2};
+  --line-height-h2: #{$line-height-h2};
+
+  --font-typo-h3: #{meta.inspect($font-typo-h3)};
+  --font-weight-h3: #{$font-weight-h3};
+  --font-size-h3: #{$font-size-h3};
+  --line-height-h3: #{$line-height-h3};
+
+  --font-typo-h4: #{meta.inspect($font-typo-h4)};
+  --font-weight-h4: #{$font-weight-h4};
+  --font-size-h4: #{$font-size-h4};
+  --line-height-h4: #{$line-height-h4};
+
+  --font-typo-h5: #{meta.inspect($font-typo-h5)};
+  --font-weight-h5: #{$font-weight-h5};
+  --font-size-h5: #{$font-size-h5};
+  --line-height-h5: #{$line-height-h5};
+
+  --font-typo-h6: #{meta.inspect($font-typo-h6)};
+  --font-weight-h6: #{$font-weight-h6};
+  --font-size-h6: #{$font-size-h6};
+  --line-height-h6: #{$line-height-h6};
+
+  --font-typo-ext: #{meta.inspect($font-typo-ext)};
+  --font-weight-ext: #{$font-weight-ext};
+  --font-size-ext: #{$font-size-ext};
+  --line-height-ext: #{$line-height-ext};
+
+  --root-size: #{$root-size};
+
+  --main-shadow: #{$main-box-shadow};
+
+  --radius-5: #{$radius-5};
+
+  --radius-10: #{$radius-10};
+
+  --radius-15: #{$radius-15};
+}
+
+$prefixes: "webkit" "moz" "ms" "o";
+
+$media-screen: "up" "down" "only" "between";
+
+// Define grid breakpoints with pixel values for responsive design
+$grid-breakpoints: (
+  xs: 0,
+  // Extra small devices (portrait phones, less than 576px)
+  sm: 576px,
+  // Small devices (portrait tablets, 576px and up)
+  md: 768px,
+  // Medium devices (tablets, 768px and up)
+  lg: 992px,
+  // Large devices (desktops, 992px and up)
+  xl: 1200px,
+  // Extra large devices (large desktops, 1200px and up)
+  xxl: 1400px,
+  // 2x extra large devices (larger desktops, 1400px and up)
+  xxxl: 1500px,
+);
+
+$container-max-widths: (
+  sm: 640px,
+  md: 800px,
+  lg: 1080px,
+  xl: 1320px,
+  xxl: 1460px,
+  xxxl: 1540px,
+);
+
+// A small value used to subtract from certain measurements, for example, spacing
+$subtract: 0.02px; // Small subtraction for precise measurements
+
+// Define breakpoints for use in media queries or responsive design
+$breakpoints: (
+  xs,
+  sm,
+  md,
+  lg,
+  xl,
+  xxl,
+  xxxl
+); // Breakpoints in order of size without pixel values

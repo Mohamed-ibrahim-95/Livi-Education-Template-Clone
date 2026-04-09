@@ -1,0 +1,96 @@
+@use "../../abstracts/" as *;
+
+// Start Categories
+.categories-container {
+  .categories {
+    // padding: units(120, "rem") 0;
+
+    .categories-boxs {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      grid-gap: units(60, "px");
+
+      @include media-breakpoints("up", "xxxl") {
+        grid-gap: units(30, "px");
+      }
+
+      .box {
+        background-color: var(--body-bg-color);
+        border: 1px solid var(--border-color);
+        border-radius: units(10, "px");
+
+        @include flex(
+          $display: flex,
+          $direction: column,
+          $wrap: wrap,
+          $align: center,
+          $gap: units(20, "rem")
+        );
+
+        .box-content {
+          padding: 35px clamp(0.75rem, 0.661rem + 0.4908vw, 1.25rem);
+          @include flex(
+            $display: flex,
+            $direction: column,
+            $wrap: wrap,
+            $align: center
+          );
+          .cat-icon {
+            @include same-values((width, height), units(60, "px"));
+          }
+
+          .cat-title {
+            a {
+              display: block;
+              margin: units(25, "rem") 0 units(8, "rem");
+
+              @include font(
+                $color: var(--head-alt-color),
+                $size: units(20, "rem"),
+                $weight: 600,
+                $status: capitalize
+              );
+            }
+          }
+
+          .cat-info {
+            p {
+              @include font($status: capitalize);
+            }
+          }
+        }
+
+        // Arrow
+        .arrow-container {
+          @include flex($display: flex, $direction: row, $justify: center);
+          margin: units(-32, "px");
+          width: 100%;
+          .arrow {
+            text-align: center;
+            line-height: units(65, "px");
+            display: block;
+            @include same-values((width, height), units(65, "px"));
+            border: 1px solid var(--primary-color);
+            border-radius: units(50, "%");
+            background-color: var(--primary-color);
+            @include font(
+              $color: var(--body-bg-color),
+              $size: units(25, "rem")
+            );
+
+            @include prefixer(transition, transform 0.3s ease-in-out);
+            @include prefixer(transform, rotate(-45deg));
+          }
+        }
+
+        &:hover {
+          .arrow-container {
+            .arrow {
+              @include prefixer(transform, rotate(0deg));
+            }
+          }
+        }
+      }
+    }
+  }
+}

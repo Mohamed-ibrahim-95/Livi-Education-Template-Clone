@@ -1,0 +1,213 @@
+@use "../../abstracts/" as *;
+
+.courses-pricing-section {
+  .courses-pricing {
+    @include flex(
+      $display: flex,
+      $direction: column,
+      $wrap: wrap,
+      $justify: center,
+      $gap: units(40, "px")
+    );
+
+    .plans {
+      .plans-container {
+        @include flex(
+          $display: flex,
+          $direction: row,
+          $wrap: wrap,
+          $justify: center,
+          $gap: units(30, "px")
+        );
+
+        .plan {
+          .plan-control-container {
+            @include flex($display: flex, $wrap: wrap, $justify: center);
+
+            .control-box {
+              width: fit-content;
+              border: 1px solid var(--border-color);
+              padding: units(5, "px");
+              margin-bottom: units(40, "px");
+
+              .controls {
+                position: relative;
+                span {
+                  @include font($status: capitalize);
+                  @include prefixer(transition, color 0.2s ease-in-out);
+                  &.active {
+                    @include font($color: var(--body-bg-color));
+                  }
+
+                  &:not(:first-child) {
+                    position: relative;
+                    display: inline-block;
+                    padding: units(10, "px") units(50, "px");
+                    cursor: pointer;
+                    z-index: 2;
+                  }
+
+                  &.background {
+                    position: absolute;
+                    left: 0;
+                    width: units(50, "%");
+                    height: units(100, "%");
+                    background-color: var(--primary-color);
+                    z-index: 1;
+                    @include prefixer(transition, left 0.2s ease-in-out);
+
+                    &.move {
+                      left: units(50, "%");
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          text-align: center;
+
+          @include media-breakpoints("down", "md") {
+            // width: clamp(
+            //   445px,
+            //   calc(445px + 115 * ((100vw - 640px) / 160)),
+            //   560px
+            // );
+            width: clamp(
+              100%,
+              calc(445px + 115 * ((100vw - 640px) / 160)),
+              560px
+            );
+          }
+
+          @include media-breakpoints("between", "md", "xl") {
+            width: clamp(
+              340px,
+              calc(340px + 110 * ((100vw - 800px) / 520)),
+              450px
+            );
+          }
+
+          @include media-breakpoints("up", "xl") {
+            width: clamp(
+              380px,
+              calc(380px + 90 * ((100vw - 1320px) / 220)),
+              470px
+            );
+          }
+        }
+
+        //
+        .plan-holder {
+          position: relative;
+
+          .plan-box {
+            // Plan box header
+            padding: clamp(1.875rem, 1.6526rem + 1.227vw, 3.125rem);
+            border: 1px solid var(--border-color);
+
+            background-color: var(--body-bg-color);
+            @include flex(
+              $display: flex,
+              $direction: column,
+              $wrap: wrap,
+              $gap: units(40, "px")
+            );
+
+            opacity: 1;
+            visibility: visible;
+            @include prefixer(
+              transition,
+              (
+                opacity 0.3s ease-in-out,
+                visibility 0.3s ease-in-out,
+                box-shadow 0.5s ease-in-out,
+                border 0.3s ease-in-out
+              )
+            );
+
+            .plan-box-header {
+              i {
+                font-size: clamp(2rem, 1.7404rem + 1.1538vw, 3.125rem);
+              }
+
+              .plan-title {
+                display: block;
+                @include font(
+                  $size: clamp(1.5rem, 1.3269rem + 0.7692vw, 2.25rem),
+                  $weight: 600,
+                  $status: capitalize
+                );
+              }
+            }
+
+            // Plan box price
+            .plan-box-price {
+              span {
+                display: block;
+              }
+
+              .plan-price {
+                @include font($size: units(52, rem), $weight: 600);
+              }
+            }
+
+            // Plan box contnet
+            .plan-box-contnet {
+              .plan-features {
+                @include flex(
+                  $display: flex,
+                  $direction: column,
+                  $wrap: wrap,
+                  $gap: units(25, "px")
+                );
+                .feature {
+                  .feature-icon {
+                    color: var(--primary-color);
+                    margin-right: units(10, "px");
+                  }
+                }
+
+                .main-button {
+                  margin-top: units(20, "px");
+                }
+              }
+            }
+
+            &.face {
+              z-index: 2;
+            }
+
+            &.back {
+              @include prefixer(transform, translateY(-100%));
+              z-index: 1;
+              position: absolute;
+              left: 0;
+              right: 0;
+            }
+
+            // Plans show and Hiddeng
+            &.hiddeng {
+              opacity: 0;
+              visibility: hidden;
+              @include prefixer(
+                transition,
+                (opacity 0.3s ease-in-out, visibility 0.3s ease-in-out)
+              );
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .subscription-details {
+    @include flex($display: flex, $justify: center);
+
+    p {
+      @include media-breakpoints("up", "lg") {
+        width: units(70, "%");
+      }
+    }
+  }
+}

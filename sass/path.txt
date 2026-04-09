@@ -1,0 +1,1 @@
+sass --watch /home/mohamed/Mohamed/Livi-main/sass/main.scss /home/mohamed/Mohamed/Livi-main/css/style.css

@@ -1,0 +1,18 @@
+@use "../../abstracts/" as *;
+
+// Start program advantages
+.advantages-container {
+  .advantages {
+    .advantages-content {
+      @include flex(
+        $display: flex,
+        $direction: row,
+        $gap: clamp(15px, 4vw, 80px)
+      );
+
+      @include media-breakpoints("down", "xl") {
+        @include flex($display: flex, $direction: column-reverse);
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+@use "../../abstracts/" as *;
+
+.courses-wallpaper {
+  .courses-content {
+    @include flex($display: flex, $direction: column, $gap: units(35, "px"));
+  }
+}

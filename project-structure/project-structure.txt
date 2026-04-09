@@ -1,0 +1,137 @@
+.
+├── css
+│   ├── style.css
+│   ├── style.css.map
+│   └── test.css
+├── images
+│   ├── advertising.png
+│   ├── Ai-Mentor-1.jpg
+│   ├── Ai-Mentor-2.jpg
+│   ├── Ai-Mentor-3.jpg
+│   ├── Ai-Mentor-4.jpg
+│   ├── align-right.svg
+│   ├── asset-svg-55.svg
+│   ├── book.png
+│   ├── course-image-01.jpg
+│   ├── course-image-02.jpg
+│   ├── course-image-03.jpg
+│   ├── course-image-04.jpg
+│   ├── course-image-05.jpg
+│   ├── course-image-06.jpg
+│   ├── course-image-07.jpg
+│   ├── course-image-08.jpg
+│   ├── course-image-09.jpg
+│   ├── Demo-1-Slider-Image-B.png
+│   ├── fake-qr.png
+│   ├── graphic-designer.png
+│   ├── home-1-advantage-helper-image.jpg
+│   ├── laptop2.png
+│   ├── laptop.png
+│   ├── layers.png
+│   ├── logo.svg
+│   ├── megamenu-home-1.jpg
+│   ├── megamenu-home-2.jpg
+│   ├── megamenu-home-4.jpg
+│   ├── megamenu-homes-3.jpg
+│   ├── megamenu-homes-5.jpg
+│   ├── memo.png
+│   ├── newletter-bg.jpg
+│   ├── online-education.png
+│   ├── Pattern-Bg-4.png
+│   ├── photographer.png
+│   ├── photography.png
+│   ├── qr-code.png
+│   ├── search.svg
+│   ├── service-filler-img-1.jpg
+│   ├── service-filler-img-2.jpg
+│   ├── service-filler-img-3.jpg
+│   ├── shopping-bag.svg
+│   ├── student.png
+│   ├── Teach-Img-2.jpg
+│   ├── Teach-Img-4.jpg
+│   └── user.svg
+├── index.html
+├── ind.html
+├── javascript
+│   ├── accordion
+│   │   └── accordion.js
+│   ├── main.js
+│   ├── nav
+│   │   └── nav.js
+│   ├── plans
+│   │   └── palns.js
+│   ├── tabs
+│   │   └── tab.js
+│   └── team
+│       └── team.js
+├── linux-tree-command-guide.md
+├── project-structure.txt
+├── sass
+│   ├── abstracts
+│   │   ├── _functions.scss
+│   │   ├── _index.scss
+│   │   ├── _mixins.scss
+│   │   ├── _placeholders.scss
+│   │   └── _variables.scss
+│   ├── base
+│   │   └── _reset.scss
+│   ├── components
+│   │   ├── _boxes.scss
+│   │   ├── _logo.scss
+│   │   ├── _main-button.scss
+│   │   ├── _main-form.scss
+│   │   ├── _main-title.scss
+│   │   ├── _section-intro.scss
+│   │   ├── _social-icons.scss
+│   │   ├── _stars.scss
+│   │   ├── _stat-box.scss
+│   │   └── _subscription-section.scss
+│   ├── main.scss
+│   ├── path.txt
+│   └── sections
+│       ├── advantages
+│       │   ├── _advantages-images.scss
+│       │   ├── _advantages.scss
+│       │   ├── _index.scss
+│       │   └── _number-boxes.scss
+│       ├── assistance
+│       │   └── _assistance.scss
+│       ├── categories
+│       │   └── _categorie.scss
+│       ├── educational
+│       │   ├── _courses.scss
+│       │   ├── _courses-wallpaper.scss
+│       │   ├── _index.scss
+│       │   └── _tabs.scss
+│       ├── header
+│       │   ├── _header_container.scss
+│       │   ├── _index.scss
+│       │   ├── _nav.scss
+│       │   ├── _support.scss
+│       │   └── _utility.scss
+│       ├── hero
+│       │   ├── _hero-container.scss
+│       │   ├── _hero-intro.scss
+│       │   └── _index.scss
+│       ├── layout
+│       │   └── _container.scss
+│       ├── plans
+│       │   └── _palns.scss
+│       ├── progress
+│       │   └── _progress.scss
+│       └── team
+│           └── _team.scss
+├── vendors
+│   └── all.min.css
+├── webfonts
+│   ├── fa-brands-400.ttf
+│   ├── fa-brands-400.woff2
+│   ├── fa-regular-400.ttf
+│   ├── fa-regular-400.woff2
+│   ├── fa-solid-900.ttf
+│   ├── fa-solid-900.woff2
+│   ├── fa-v4compatibility.ttf
+│   └── fa-v4compatibility.woff2
+└── website.txt
+
+26 directories, 109 files

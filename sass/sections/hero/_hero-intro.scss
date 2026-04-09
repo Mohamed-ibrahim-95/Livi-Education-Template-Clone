@@ -1,0 +1,23 @@
+@use "../../abstracts/" as *;
+
+.hero-layout {
+  .hero-contnet {
+    @include media-breakpoints("up", "xxl") {
+      padding: 0 units(30, "rem");
+    }
+
+    .main-form {
+      @include flex(
+        $display: flex,
+        $direction: column,
+        $wrap: wrap,
+        $align: flex-start,
+        $gap: units(25, "px")
+      );
+
+      form {
+        width: units(100, "%");
+      }
+    }
+  }
+}

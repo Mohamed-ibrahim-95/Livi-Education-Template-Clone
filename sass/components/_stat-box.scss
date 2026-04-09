@@ -1,0 +1,75 @@
+@use "../abstracts/" as *;
+
+.stat-container {
+  width: fit-content;
+  border: 1px solid var(--primary-color);
+  padding: units(20, "rem");
+  background-color: var(--body-bg-color);
+  border-radius: units(10, "px");
+  z-index: 10;
+  @include flex(
+    $display: flex,
+    $direction: row,
+    $wrap: wrap,
+    $align: center,
+    $gap: units(20, "px")
+  );
+
+  &.column {
+    text-align: center;
+    @include flex($direction: column, $wrap: wrap, $align: center);
+  }
+
+  &.floating {
+    position: absolute;
+  }
+
+  &.d-none {
+    @include media-breakpoints("down", "xl") {
+      display: none;
+    }
+  }
+
+  &.top {
+    top: units(140, "px");
+  }
+
+  &.bottom {
+    right: 0;
+    bottom: units(115, "px");
+  }
+
+  &.bottom-zero {
+    @include media-breakpoints("down", "md") {
+      bottom: 0;
+    }
+  }
+
+  .stat-image {
+    .img-icon {
+      @include same-values((width, height), units(80, "px"));
+      background-color: var(--primary-color);
+      padding: units(15, "rem");
+      border-radius: units(50, "%");
+    }
+  }
+
+  .stat-content {
+    .stat-number {
+      span {
+        display: block;
+        @include font($size: units(30, "rem"), $weight: 700);
+      }
+    }
+
+    .stat-title {
+      span {
+        @include font(
+          $size: units(16, "rem"),
+          $weight: 600,
+          $status: capitalize
+        );
+      }
+    }
+  }
+}

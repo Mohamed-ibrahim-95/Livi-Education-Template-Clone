@@ -1,0 +1,61 @@
+@use "sass:meta"; // Metadata utilities
+@use "sass:math"; // Mathematical functions
+@use "sass:color"; // Color manipulation
+@use "sass:string"; // String operations
+@use "sass:list"; // List operations
+@use "sass:map"; // Map operations
+@use "sass:selector"; // Selector utilities
+
+@use "../abstracts/" as *;
+
+/* Start - General reset */
+html {
+  font-size: units(100, "%");
+  scroll-behavior: smooth;
+  @include prefixer(box-sizing, border-box);
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  @include prefixer(box-sizing, inherit);
+  @include prefixer(user-select, none);
+}
+
+::-webkit-scrollbar {
+  width: units(10, "px");
+}
+
+::-webkit-scrollbar-track {
+  background-color: #eeeeee8f;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+}
+
+body {
+  font-family: var(--font-Typo-Base), var(--font-Typo-Alt);
+  // height: 20000px;
+  @include media-breakpoints("down", "xl") {
+    position: relative;
+  }
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  width: units(100, "%");
+  vertical-align: bottom;
+}
+
+/* End - General reset */

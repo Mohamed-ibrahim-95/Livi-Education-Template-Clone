@@ -1,0 +1,22 @@
+@use "../abstracts/" as *;
+
+// Main Button
+.main-button {
+  width: fit-content;
+  border-radius: units(5, "px");
+  border: none;
+  outline: none;
+  padding: units(14, "rem") units(24, "rem");
+  background-color: var(--primary-color);
+  cursor: pointer;
+  @include font($size: units(16, "rem"), $status: capitalize);
+  @include font($color: var(--body-bg-color), $size: var(16, "rem"));
+
+  &.center-text {
+    text-align: center;
+  }
+
+  &.fill {
+    width: units(100, "%");
+  }
+}

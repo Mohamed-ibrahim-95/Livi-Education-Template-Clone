@@ -1,0 +1,109 @@
+@use "../abstracts/" as *;
+
+.promo-subscribe-container {
+  &.over {
+    background-image: url(../images/newletter-bg.jpg);
+    border-radius: units(10, "px");
+    overflow: hidden;
+
+    .overlay {
+      background-color: #0000009a;
+      padding: units(50, "rem");
+    }
+  }
+
+  .overlay {
+    @include flex(
+      $display: flex,
+      $direction: column,
+      $wrap: wrap,
+      $gap: units(20, "px")
+    );
+
+    .title {
+      h5 {
+        @include font(
+          $color: var(--body-bg-color),
+          $size: units(23, "rem"),
+          $weight: 700
+        );
+
+        &.dark {
+          @include font($color: var(--head-alt-color));
+        }
+      }
+    }
+
+    // Mian Form
+
+    .footer {
+      %same-property {
+        @include font($color: var(--body-bg-color), $size: var(16, "rem"));
+      }
+
+      p {
+        @extend %same-property;
+
+        a {
+          position: relative;
+          display: inline-block;
+          @extend %same-property;
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: units(100, "%");
+            height: 1px;
+            background-color: var(--body-bg-color);
+            @include same-values((left, width), 0);
+            @include prefixer(transition, width 0.3s ease-in-out);
+          }
+
+          &:hover {
+            &::after {
+              width: units(100, "%");
+            }
+          }
+        }
+
+        // Dark
+        &.dark {
+          @include font($color: var(--body-txt-color));
+
+          a {
+            @include font($color: var(--head-alt-color));
+            @include prefixer(transition, color 0.3s ease-in-out);
+
+            &::after {
+              background-color: var(--primary-color);
+            }
+
+            &:hover {
+              @include font($color: var(--primary-color));
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// <div class="promo-subscribe-container over">
+// <div class="overlay">
+//   <div class="title">
+//     <h5 class="dark">Unlock 15% Off Your Next Purchase!</h5>
+//   </div>
+//   <div class="main-form">
+//     <form action="">
+//       <input type="email" placeholder="Enter Your Email" />
+//       <input type="submit" value="Subscribe" />
+//     </form>
+//   </div>
+//   <div class="footer">
+//     <p class="dark">
+//       By clicking “Subscribe”, you agree to our
+//       <a href="">Privacy Policy.</a>
+//     </p>
+//   </div>
+// </div>
+// </div>

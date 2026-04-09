@@ -1,0 +1,331 @@
+/* Import abstracts and utilities */
+@use "../../abstracts/" as *;
+@use "sass:meta"; // Metadata utilities
+
+/* Global variables for consistent styling */
+$transition-default: 0.3s ease-in-out;
+$transition-fast: 0.2s ease-in-out;
+$mobile-padding: units(12, "rem");
+$desktop-padding: units(28, "rem");
+$submenu-width: units(260, "px");
+
+/* Utility mixins for common styling patterns */
+@mixin hover-link-desktop {
+  @include media-breakpoints("up", "xxl") {
+    @include font($color: var(--nav-link-hover-color));
+  }
+}
+
+@mixin hover-link-mobile {
+  @include media-breakpoints("down", "xxl") {
+    @include font($color: var(--body-bg-color));
+    background-color: var(--primary-color);
+  }
+}
+
+@mixin border-bottom {
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Main Navigation Container */
+.nav {
+  /* Mobile navigation positioning */
+  @include media-breakpoints("down", "xxl") {
+    height: 100vh;
+    background-color: var(--body-bg-color);
+    position: fixed;
+    top: 0;
+    right: units(-251, "px");
+    border-left: 1px solid var(--border-color);
+    @include prefixer(transition, right #{$transition-default});
+
+    // Show submenu on mobile
+    &.show-menu {
+      right: 0;
+    }
+  }
+
+  /* Navigation wrapper - Contains all menu elements */
+  .navWrapper {
+    /* Main menu - Primary navigation list */
+    .mainMenu {
+      /* Desktop layout - Horizontal menu */
+      @include flex(
+        $display: flex,
+        $direction: row,
+        $wrap: wrap,
+        $align: center
+      );
+
+      @include media-breakpoints("up", "xxl") {
+        position: relative;
+
+        // underline
+        .underline {
+          display: block;
+          position: absolute;
+          height: 3px;
+          background-color: var(--primary-color);
+          @include same-values((left, bottom, width), 0);
+          @include prefixer(
+            transition,
+            (width #{$transition-default}, left #{$transition-default})
+          );
+        }
+      }
+
+      /* Mobile layout - Vertical menu */
+      @include media-breakpoints("down", "xxl") {
+        width: units(250, "px");
+        @include flex($direction: column, $align: flex-start);
+
+        /* Add border to menu items except the last one */
+        & > .listNavElement:not(:last-of-type) {
+          & > .link {
+            @include border-bottom;
+          }
+        }
+
+        // underline
+        .underline {
+          display: none;
+        }
+      }
+
+      /* Common styling for all navigation elements */
+      .listNavElement {
+        .link {
+          /* Typography settings for links */
+          @include font(
+            $color: var(--head-alt-color),
+            $weight: 500,
+            $family: var(--font-Typo-Alt),
+            $status: capitalize
+          );
+
+          /* Transition effects for hover states */
+          @include prefixer(
+            transition,
+            (
+              color #{$transition-default},
+              background-color #{$transition-default}
+            )
+          );
+
+          /* Mobile padding for links */
+          @include media-breakpoints("down", "xxl") {
+            padding: #{$mobile-padding};
+          }
+
+          /* Faster transitions for mobile */
+          @include media-breakpoints("down", "xxl") {
+            @include prefixer(
+              transition,
+              (color #{$transition-fast}, background-color #{$transition-fast})
+            );
+          }
+        }
+
+        /* Hover states for links */
+        &:hover {
+          & > .link {
+            @include hover-link-desktop;
+            @include hover-link-mobile;
+          }
+        }
+
+        /* Mobile styling for list elements */
+        @include media-breakpoints("down", "xxl") {
+          width: units(100, "%");
+          @include font($size: units(15, "rem"));
+        }
+      }
+
+      /* Top-level menu items styling */
+      & > {
+        .menuItem > {
+          .link {
+            /* Desktop padding for main menu links */
+            @include media-breakpoints("up", "xxl") {
+              padding: #{$desktop-padding} #{$desktop-padding};
+            }
+          }
+        }
+      }
+
+      /* Mobile navigation controls (back and close buttons) */
+      .navControls {
+        padding: 0 #{$mobile-padding};
+        height: 45px;
+
+        /* Flex layout for navigation controls */
+        @include flex(
+          $display: flex,
+          $wrap: wrap,
+          $justify: space-between,
+          $align: center
+        );
+
+        /* Close button alignment for main navigation */
+        &.closeMainNav {
+          @include flex(
+            $display: flex,
+            $wrap: wrap,
+            $justify: flex-end,
+            $align: center
+          );
+
+          @include media-breakpoints("up", "xxl") {
+            display: none;
+          }
+        }
+
+        /* Interactive elements */
+        .goBack,
+        .closeNav {
+          cursor: pointer;
+        }
+
+        /* Hide controls on desktop */
+        @include media-breakpoints("up", "xxl") {
+          display: none;
+        }
+      }
+
+      /* Dropdown menu parent elements */
+      .dropdownParent {
+        position: relative;
+
+        /* Styling for links with submenus */
+        .hasSubmenu {
+          @include flex(
+            $display: flex,
+            $direction: row,
+            $wrap: wrap,
+            $justify: space-between,
+            $align: center,
+            $gap: units(10, "px")
+          );
+        }
+
+        /* Submenu styling - First and second level dropdown menus */
+        .submenu {
+          padding: units(14, "rem") 0;
+          position: absolute;
+          background-color: var(--body-bg-color);
+
+          /* Desktop submenu animation and visibility */
+          @include media-breakpoints("up", "xxl") {
+            width: #{$submenu-width};
+            opacity: 0;
+            visibility: hidden;
+            @include prefixer(
+              transition,
+              (
+                transform #{$transition-default},
+                opacity #{$transition-default},
+                visibility #{$transition-default}
+              )
+            );
+            @include prefixer(transform, translateY(units(14, "px")));
+          }
+
+          /* Nested submenu positioning (second level dropdown) */
+          &.nestedSubmenu {
+            top: 0;
+            left: units(100, "%");
+
+            /* Slight adjustment for desktop to prevent overlap */
+            @include media-breakpoints("up", "xxl") {
+              left: units(98, "%");
+            }
+          }
+
+          /* Mobile submenu styling */
+          @include media-breakpoints("down", "xxl") {
+            padding: 0;
+            @include prefixer(transition, left #{$transition-default});
+
+            // Show submenu on mobile
+            &.show-menu {
+              left: 0;
+            }
+
+            /* Remove box shadow and border radius on mobile */
+            &.rounded-shadow {
+              border-radius: 0;
+              box-shadow: none;
+            }
+
+            /* Add border to submenu items except the last one */
+            & > .listNavElement:not(:last-of-type) {
+              & > .link {
+                @include border-bottom;
+              }
+            }
+          }
+
+          /* Submenu items styling */
+          .submenuItem {
+            .link {
+              /* Desktop submenu link padding */
+              @include media-breakpoints("up", "xxl") {
+                padding: units(10, "rem") #{$desktop-padding};
+              }
+
+              /* Font size for submenu links */
+              @include media-breakpoints("up", "xxl") {
+                @include font($size: units(15, "rem"));
+              }
+
+              /* Underline effect animation for submenu links */
+              .linkText {
+                @include media-breakpoints("up", "xxl") {
+                  position: relative;
+
+                  &::after {
+                    content: "";
+                    position: absolute;
+                    top: units(100, "%");
+                    height: units(1, "px");
+                    background-color: var(--primary-color);
+                    @include same-values((left, width), 0);
+                    @include prefixer(transition, width #{$transition-default});
+                  }
+                }
+              }
+
+              /* Hover effect animation for underline */
+              &:hover {
+                @include media-breakpoints("up", "xxl") {
+                  .linkText {
+                    &::after {
+                      width: units(100, "%");
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          /* Mobile submenu positioning */
+          @include media-breakpoints("down", "xxl") {
+            top: 0;
+            @include same-values((width, left), units(100, "%"));
+          }
+        }
+
+        /* Show submenu on hover for desktop */
+        &:hover {
+          & > .submenu {
+            @include media-breakpoints("up", "xxl") {
+              @include prefixer(transform, translateY(units(0, "px")));
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+      }
+    }
+  }
+}

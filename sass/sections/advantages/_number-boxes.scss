@@ -1,0 +1,86 @@
+@use "../../abstracts/" as *;
+
+.advantages-container {
+  .advantages {
+    .advantages-content {
+      .number-boxes {
+        @include flex(
+          $display: flex,
+          $direction: column,
+          $gap: units(50, "px")
+        );
+
+        .boxes {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: units(20, "px");
+
+          @include media-breakpoints("only", "lg") {
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+          }
+
+          .box {
+            @include flex($display: flex, $gap: units(25, "px"));
+
+            .box-image {
+              img {
+                margin-top: 20px;
+                @include same-values((width, height), units(60, "px"));
+              }
+            }
+
+            .box-content {
+              .num {
+                @include font(
+                  $color: var(--head-alt-color),
+                  $size: clamp(32px, 1.2vw + 1rem, 40px),
+                  $weight: 700
+                );
+              }
+            }
+          }
+        }
+
+        .support-panel {
+          @include flex(
+            $display: flex,
+            $wrap: wrap,
+            $align: center,
+            $gap: units(50, "px")
+          );
+          .media-group {
+            @include flex(
+              $display: flex,
+              $direction: null,
+              $wrap: null,
+              $justify: null,
+              $align: center,
+              $gap: units(20, "px")
+            );
+
+            .media-group-img {
+              @include same-values((width, height), units(60, "px"));
+            }
+
+            .media-group-content {
+              span {
+                @include prefixer(transition, color 0.3s ease-in-out);
+                @include font(
+                  $color: var(--head-alt-color),
+                  $size: units(20, "rem"),
+                  $weight: 600,
+                  $status: capitalize
+                );
+
+                &:hover {
+                  color: var(--primary-color);
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

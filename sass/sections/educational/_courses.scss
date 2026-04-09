@@ -1,0 +1,94 @@
+@use "../../abstracts/" as *;
+
+.courses-wallpaper {
+  .courses-content {
+    .courses-box-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(units(360, "px"), 1fr));
+      gap: units(30, "px");
+
+      .course-box {
+        padding: units(25, "rem");
+        border: 1px solid var(--border-color);
+        border-radius: units(10, "px");
+        background-color: var(--body-bg-color);
+
+        @include flex(
+          $display: flex,
+          $direction: column,
+          $gap: units(20, "px")
+        );
+
+        opacity: 1;
+        visibility: visible;
+        @include prefixer(
+          transition,
+          (
+            opacity 0.3s ease-in-out,
+            visibility 0.3s ease-in-out,
+            box-shadow 0.3s ease-in-out
+          )
+        );
+
+        // Meta Info
+        .course-meta {
+          @include flex(
+            $display: flex,
+            $direction: row,
+            $align: center,
+            $gap: units(15, "px")
+          );
+
+          .meta-item {
+            @include flex(
+              $display: flex,
+              $direction: row,
+              $align: center,
+              $gap: units(10, "px")
+            );
+
+            .meta-label {
+              i {
+                color: var(--primary-color);
+              }
+            }
+
+            .meta-value {
+              @include font(
+                $color: var(--head-alt-color),
+                $size: units(14, "px")
+              );
+            }
+          }
+        }
+
+        // courses-footer
+        .courses-footer {
+          .product-meta {
+            height: units(50, "px");
+            overflow: hidden;
+
+            .product-meta-stars {
+              height: 100%;
+              @include flex(
+                $display: flex,
+                $direction: row,
+
+                $justify: space-between,
+                $align: center
+              );
+              @include prefixer(
+                transition,
+                (
+                  transform 0.3s ease-in-out,
+                  opacity 0.3s ease-in-out,
+                  visibility 0.3s ease-in-out
+                )
+              );
+            }
+          }
+        }
+      }
+    }
+  }
+}

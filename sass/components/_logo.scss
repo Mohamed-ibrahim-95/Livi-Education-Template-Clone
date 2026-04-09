@@ -1,0 +1,9 @@
+@use "../abstracts/" as *;
+
+// Logo Start
+.logo_section {
+  .img {
+    @include same-values((width, max-width), units(140, "px"));
+  }
+}
+// Logo End
